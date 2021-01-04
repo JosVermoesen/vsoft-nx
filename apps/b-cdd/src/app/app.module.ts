@@ -28,7 +28,8 @@ import { DomSettingsComponent } from './components/dom/domsettings/domsettings.c
 import { DomSaveComponent } from './components/dom/domsave/domsave.component';
 import { DomLoadComponent } from './components/dom/domload/domload.component';
 import { DomToolsComponent } from './components/dom/domtools/domtools.component';
-import { TextInputComponent } from './components/text-input/text-input.component';
+
+import { SharedUiModule } from '@vsoft-nx/shared-ui';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -45,8 +46,7 @@ export function createTranslateLoader(http: HttpClient) {
     DomExportComponent,
     DomLoadComponent,
     DomSaveComponent,
-    DomToolsComponent,
-    TextInputComponent
+    DomToolsComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +64,8 @@ export function createTranslateLoader(http: HttpClient) {
     TabsModule.forRoot(),
     BsDatepickerModule.forRoot(),
     ModalModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedUiModule
   ],
   providers: [DomService, LanguageService, BsModalRef],
   entryComponents: [

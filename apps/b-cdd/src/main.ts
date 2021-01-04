@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -9,8 +8,8 @@ if (environment.production) {
   enableProdMode();
 
   // disable any console.log debugging statements in production mode
-  window.console.log = function () { };
-  window.console.error = function () { };
+  window.console.log = function () { '' };
+  window.console.error = function () { '' };
 }
 
 platformBrowserDynamic()

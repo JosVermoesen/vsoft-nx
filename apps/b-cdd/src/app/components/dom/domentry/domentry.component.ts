@@ -43,7 +43,7 @@ export class DomEntryComponent implements OnInit {
   locked = false;
   lockLabel = this.ts.instant('CDDENTRY.UnLockButtonLabel');
 
-  endToEndRequiredMessage: string;
+  /* endToEndRequiredMessage: string;
   amountRequiredMessage: string;
   amountMinMaxMessage: string;
   mandateIdRequiredMessage: string;
@@ -52,12 +52,7 @@ export class DomEntryComponent implements OnInit {
   ibanRequiredMessage: string;
   ibanMinMaxMessage: string;
   communicationRequiredMessage: string;
-  validationMessages: any;
-
-  communicationLabel: string;
-  mandateIdLabel: string;
-  clientNameLabel: string;
-  clientIbanLabel: string;
+  validationMessages: any; */
 
   constructor(
     private domService: DomService,
@@ -106,22 +101,7 @@ export class DomEntryComponent implements OnInit {
   }
 
   initErrorMessages() {
-    this.ts.get('CDDENTRY.CommunicationLabel').subscribe((res: string) => {
-      this.communicationLabel = res;
-    });
-    this.ts.get('CDDENTRY.MandateIdLabel').subscribe((res: string) => {
-      this.mandateIdLabel = res;
-    });
-
-    this.ts.get('CDDENTRY.ClientNameLabel').subscribe((res: string) => {
-      this.clientNameLabel = res;
-    });
-
-    this.ts.get('CDDENTRY.IbanNumberLabel').subscribe((res: string) => {
-      this.clientIbanLabel = res;
-    });
-
-    this.ts.get('CDDENTRY.EndToEndRequiredMessage').subscribe(res => {
+    /* this.ts.get('CDDENTRY.EndToEndRequiredMessage').subscribe(res => {
       this.endToEndRequiredMessage = res;
     });
     this.ts.get('CDDENTRY.AmountRequiredMessage').subscribe(res => {
@@ -147,11 +127,11 @@ export class DomEntryComponent implements OnInit {
     });
     this.ts.get('CDDENTRY.CommunicationRequiredMessage').subscribe(res => {
       this.communicationRequiredMessage = res;
-    });
+    }); */
   }
 
   refreshErrorMessages() {
-    this.validationMessages = {
+    /* this.validationMessages = {
       endToEndReference: [
         { type: 'required', message: this.endToEndRequiredMessage }
       ],
@@ -188,14 +168,10 @@ export class DomEntryComponent implements OnInit {
       communication: [
         { type: 'required', message: this.communicationRequiredMessage }
       ]
-    };
+    }; */
   }
 
   ibanMatchValidator(ibanToCheck: string): boolean {
-    /* return g.get('password').value === g.get('confirmPassword').value
-      ? null
-      : { mismatch: true }; */
-    // const ibanValid = checkIBAN(ibanToCheck, true, false);
     const ibanValid = IbanCheck(ibanToCheck, true, false);
     if (ibanValid == ibanToCheck) {
       return true;

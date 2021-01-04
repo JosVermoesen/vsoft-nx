@@ -21,14 +21,14 @@ export class DomSettingsComponent implements OnInit {
 
   public onSaved: Subject<boolean>;
 
-  nameLabel: string;
+  /* nameLabel: string;
   enterpriseNumberLabel: string;
   countryCodeLabel: string;
   streetAndNumberLabel: string;
   postalCodeAndCityLabel: string;
   ibanLabel: string;
   bicLabel: string;
-  domIdLabel: string;
+  domIdLabel: string; */
 
   constructor(
     public bsModalRef: BsModalRef,
@@ -37,7 +37,7 @@ export class DomSettingsComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
-    this.ts.get('CDDSETTINGS.NameLabel').subscribe((res: string) => {
+    /* this.ts.get('CDDSETTINGS.NameLabel').subscribe((res: string) => {
       this.nameLabel = res;
     });
     this.ts.get('CDDSETTINGS.EnterpriseNumberLabel').subscribe((res: string) => {
@@ -60,7 +60,7 @@ export class DomSettingsComponent implements OnInit {
     });
     this.ts.get('CDDSETTINGS.DomIdLabel').subscribe((res: string) => {
       this.domIdLabel = res;
-    });
+    }); */
 
     this.onSaved = new Subject();
     this.domSettings = JSON.parse(localStorage.getItem('cddSettings_Template'));

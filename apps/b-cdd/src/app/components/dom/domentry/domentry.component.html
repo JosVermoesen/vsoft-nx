@@ -12,27 +12,36 @@
             <input type="number" class="form-control mt-1" formControlName="amount"
               placeholder="{{ 'CDDENTRY.AmountLabel' | translate }}">
 
-            <vsoft-nx-text-input formControlName="communication" [label]="communicationLabel"></vsoft-nx-text-input>
-            <!-- <input type="text" class="form-control mt-1" formControlName="communication"
-              placeholder="{{ 'CDDENTRY.CommunicationLabel' | translate }}"> -->
-
-            <!-- <input readonly type="text" class="form-control mt-1" formControlName="endToEndReference"
-                            placeholder="{{ 'CDDENTRY.EndToEndLabel' | translate }}"> -->
+            <vsoft-nx-text-input
+              formControlName="communication"
+              label="{{ 'CDDENTRY.CommunicationLabel' | translate }}"
+              warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+            ></vsoft-nx-text-input>
 
             <div *ngIf="!locked">
-              <vsoft-nx-text-input formControlName="mandateId" [label]="mandateIdLabel"></vsoft-nx-text-input>
-              <!-- <input type="text" class="form-control mt-1" formControlName="mandateId"
-                placeholder="{{ 'CDDENTRY.MandateIdLabel' | translate }}"> -->
+              <vsoft-nx-text-input
+                formControlName="mandateId"
+                label="{{ 'CDDENTRY.MandateIdLabel' | translate }}"
+                warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+              ></vsoft-nx-text-input>
+
               <input class="form-control mt-1" #datepickerYMD="bsDatepicker" bsDatepicker
                 formControlName="mandateStartDate" placeholder="{{ 'CDDENTRY.MandateStartDateLabel' | translate }}"
                 [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', containerClass: 'theme-default' }">
-              <vsoft-nx-text-input formControlName="clientName" [label]="clientNameLabel"></vsoft-nx-text-input>
-              <!-- <input type="text" class="form-control mt-1" formControlName="clientName"
-                placeholder="{{ 'CDDENTRY.ClientNameLabel' | translate }}"> -->
-              <vsoft-nx-text-input formControlName="clientIban" [label]="clientIbanLabel"></vsoft-nx-text-input>
-              <!-- <input type="text" class="form-control mt-1" formControlName="clientIban"
-                placeholder="{{ 'CDDENTRY.IbanNumberLabel' | translate }}"> -->
+
+              <vsoft-nx-text-input
+                formControlName="clientName"
+                label="{{ 'CDDENTRY.ClientNameLabel' | translate }}"
+                warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+              ></vsoft-nx-text-input>
+
+              <vsoft-nx-text-input
+                formControlName="clientIban"
+                label="{{ 'CDDENTRY.IbanNumberLabel' | translate }}"
+                warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+              ></vsoft-nx-text-input>
             </div>
+
             <div *ngIf="locked">
               <input readonly type="text" class="form-control mt-1" formControlName="mandateId">
               <input readonly class="form-control mt-1" formControlName="mandateStartDate">
@@ -52,7 +61,7 @@
               (click)="lockSwitch()">{{ lockLabel }}</button>
           </div>
 
-          <div *ngIf="(validationMessages)">
+          <!-- <div *ngIf="(validationMessages)">
             <ng-container *ngFor="let validation of validationMessages.amount">
               <div class="error-message"
                 *ngIf="domEntryForm.get('amount').hasError(validation.type) && (domEntryForm.get('amount').dirty || domEntryForm.get('amount').touched)">
@@ -95,7 +104,7 @@
                 {{ validation.message }}
               </div>
             </ng-container>
-          </div>
+          </div> -->
 
         </form>
       </tab>
