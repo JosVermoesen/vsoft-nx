@@ -1,0 +1,75 @@
+{
+  "npmScope": "vsoft-nx",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "vsoft-nx": {
+      "tags": []
+    },
+    "vsoft-nx-e2e": {
+      "tags": [],
+      "implicitDependencies": ["vsoft-nx"]
+    },
+    "shared-ui": {
+      "tags": []
+    },
+    "privacy-ui": {
+      "tags": []
+    },
+    "shared-ui-e2e": {
+      "tags": [],
+      "implicitDependencies": ["shared-ui"]
+    },
+    "privacy-ui-e2e": {
+      "tags": [],
+      "implicitDependencies": ["privacy-ui"]
+    },
+    "b-vsoft": {
+      "tags": []
+    },
+    "b-vsoft-e2e": {
+      "tags": [],
+      "implicitDependencies": ["b-vsoft"]
+    },
+    "b-cdd": {
+      "tags": []
+    },
+    "b-cdd-e2e": {
+      "tags": [],
+      "implicitDependencies": ["b-cdd"]
+    },
+    "b-rv": {
+      "tags": []
+    },
+    "b-rv-e2e": {
+      "tags": [],
+      "implicitDependencies": ["b-rv"]
+    }
+  }
+}

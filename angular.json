@@ -1,0 +1,707 @@
+{
+  "version": 1,
+  "projects": {
+    "vsoft-nx": {
+      "projectType": "application",
+      "root": "apps/vsoft-nx",
+      "sourceRoot": "apps/vsoft-nx/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/vsoft-nx",
+            "index": "apps/vsoft-nx/src/index.html",
+            "main": "apps/vsoft-nx/src/main.ts",
+            "polyfills": "apps/vsoft-nx/src/polyfills.ts",
+            "tsConfig": "apps/vsoft-nx/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/vsoft-nx/src/favicon.ico",
+              "apps/vsoft-nx/src/assets"
+            ],
+            "styles": [
+              "apps/vsoft-nx/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/vsoft-nx/src/environments/environment.ts",
+                  "with": "apps/vsoft-nx/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "vsoft-nx:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "vsoft-nx:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "vsoft-nx:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/vsoft-nx/src/**/*.ts",
+              "apps/vsoft-nx/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/vsoft-nx"
+          ],
+          "options": {
+            "jestConfig": "apps/vsoft-nx/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "vsoft-nx-e2e": {
+      "root": "apps/vsoft-nx-e2e",
+      "sourceRoot": "apps/vsoft-nx-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/vsoft-nx-e2e/cypress.json",
+            "tsConfig": "apps/vsoft-nx-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vsoft-nx:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "vsoft-nx:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/vsoft-nx-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui": {
+      "projectType": "library",
+      "root": "libs/shared-ui",
+      "sourceRoot": "libs/shared-ui/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared-ui/src/**/*.ts",
+              "libs/shared-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared-ui"
+          ],
+          "options": {
+            "jestConfig": "libs/shared-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/shared-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/shared-ui",
+            "config": {
+              "configFolder": "libs/shared-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "privacy-ui": {
+      "projectType": "library",
+      "root": "libs/privacy-ui",
+      "sourceRoot": "libs/privacy-ui/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/privacy-ui/src/**/*.ts",
+              "libs/privacy-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/privacy-ui"
+          ],
+          "options": {
+            "jestConfig": "libs/privacy-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/privacy-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/privacy-ui",
+            "config": {
+              "configFolder": "libs/privacy-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "shared-ui-e2e": {
+      "root": "apps/shared-ui-e2e",
+      "sourceRoot": "apps/shared-ui-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/shared-ui-e2e/cypress.json",
+            "tsConfig": "apps/shared-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "shared-ui:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "shared-ui:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/shared-ui-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "privacy-ui-e2e": {
+      "root": "apps/privacy-ui-e2e",
+      "sourceRoot": "apps/privacy-ui-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/privacy-ui-e2e/cypress.json",
+            "tsConfig": "apps/privacy-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "privacy-ui:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "privacy-ui:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/privacy-ui-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "b-vsoft": {
+      "projectType": "application",
+      "root": "apps/b-vsoft",
+      "sourceRoot": "apps/b-vsoft/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "axios",
+              "qs"
+            ],
+            "outputPath": "dist/apps/b-vsoft",
+            "index": "apps/b-vsoft/src/index.html",
+            "main": "apps/b-vsoft/src/main.ts",
+            "polyfills": "apps/b-vsoft/src/polyfills.ts",
+            "tsConfig": "apps/b-vsoft/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/b-vsoft/src/favicon.ico",
+              "apps/b-vsoft/src/assets",
+              "apps/b-vsoft/src/BingSiteAuth.xml",
+              "apps/b-vsoft/src/sitemap.xml"
+            ],
+            "styles": [
+              "apps/b-vsoft/src/styles.scss"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/b-vsoft/src/environments/environment.ts",
+                  "with": "apps/b-vsoft/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "b-vsoft:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "b-vsoft:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "b-vsoft:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/b-vsoft/src/**/*.ts",
+              "apps/b-vsoft/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/b-vsoft"
+          ],
+          "options": {
+            "jestConfig": "apps/b-vsoft/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "b-vsoft-e2e": {
+      "root": "apps/b-vsoft-e2e",
+      "sourceRoot": "apps/b-vsoft-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/b-vsoft-e2e/cypress.json",
+            "tsConfig": "apps/b-vsoft-e2e/tsconfig.e2e.json",
+            "devServerTarget": "b-vsoft:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "b-vsoft:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/b-vsoft-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "b-cdd": {
+      "projectType": "application",
+      "root": "apps/b-cdd",
+      "sourceRoot": "apps/b-cdd/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "allowedCommonJsDependencies": [
+              "file-saver"
+            ],
+            "outputPath": "dist/apps/b-cdd",
+            "index": "apps/b-cdd/src/index.html",
+            "main": "apps/b-cdd/src/main.ts",
+            "polyfills": "apps/b-cdd/src/polyfills.ts",
+            "tsConfig": "apps/b-cdd/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/b-cdd/src/favicon.ico",
+              "apps/b-cdd/src/assets"
+            ],
+            "styles": [
+              "apps/b-cdd/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/b-cdd/src/environments/environment.ts",
+                  "with": "apps/b-cdd/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "b-cdd:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "b-cdd:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "b-cdd:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/b-cdd/src/**/*.ts",
+              "apps/b-cdd/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/b-cdd"
+          ],
+          "options": {
+            "jestConfig": "apps/b-cdd/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "b-cdd-e2e": {
+      "root": "apps/b-cdd-e2e",
+      "sourceRoot": "apps/b-cdd-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/b-cdd-e2e/cypress.json",
+            "tsConfig": "apps/b-cdd-e2e/tsconfig.e2e.json",
+            "devServerTarget": "b-cdd:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "b-cdd:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/b-cdd-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "b-rv": {
+      "projectType": "application",
+      "root": "apps/b-rv",
+      "sourceRoot": "apps/b-rv/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "axios",
+              "qs"
+            ],
+            "outputPath": "dist/apps/b-rv",
+            "index": "apps/b-rv/src/index.html",
+            "main": "apps/b-rv/src/main.ts",
+            "polyfills": "apps/b-rv/src/polyfills.ts",
+            "tsConfig": "apps/b-rv/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/b-rv/src/brocom.ico",
+              "apps/b-rv/src/assets",
+              "apps/b-rv/src/BingSiteAuth.xml",
+              "apps/b-rv/src/sitemap.xml"
+            ],
+            "styles": [
+              "apps/b-rv/src/styles.scss"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/quill/dist/quill.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/b-rv/src/environments/environment.ts",
+                  "with": "apps/b-rv/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "b-rv:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "b-rv:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "b-rv:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/b-rv/src/**/*.ts",
+              "apps/b-rv/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/b-rv"
+          ],
+          "options": {
+            "jestConfig": "apps/b-rv/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "b-rv-e2e": {
+      "root": "apps/b-rv-e2e",
+      "sourceRoot": "apps/b-rv-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/b-rv-e2e/cypress.json",
+            "tsConfig": "apps/b-rv-e2e/tsconfig.e2e.json",
+            "devServerTarget": "b-rv:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "b-rv:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/b-rv-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "b3cd2414-9fc9-4de0-85c3-b0a72b95ba28"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "vsoft-nx"
+}

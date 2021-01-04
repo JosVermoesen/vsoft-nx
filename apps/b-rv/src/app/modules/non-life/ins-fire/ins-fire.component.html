@@ -1,0 +1,82 @@
+<!-- PAGE HEADER -->
+<header id="page-header">
+    <div class="container">
+        <div class="row mt-1">
+            <div class="col-md-6 m-auto text-center">
+                <h1>Verzekering Brand</h1>
+                <!-- <p>Intro eventueel</p> -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENTFUL TAB SECTION -->
+<div *ngIf="cfFireGenerally">
+    <section id="ifire-tabs">
+        <div class="container">
+            <div class="row">
+                <tabset #staticTabs class="bg-secondary">
+                    
+                    <tab heading="Formulieren">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card text-center border-primary mb-resp">
+                                    <a href="https://docserver.rv-services.be/!pdfDocumenten/saerPlaatsenWoning.pdf"
+                                        target="_blank" class="nav-link">SAER Woning</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card text-center border-primary mb-resp">
+                                    <a href="https://docserver.rv-services.be/!pdfDocumenten/saerPlaatsenAppartement.pdf"
+                                        target="_blank" class="nav-link">SAER Appartement</a>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card border-primary mb-resp">
+                                    <div class="ml-3 mt-3 mr-3">
+                                        SAER 1986 (Systeem Afschaffing Evenredigheid Regel) wordt door ons kantoor
+                                        al meer dan
+                                        30 jaar aanbevolen om de eigenaar onbeperkt te verzekeren voor het gebouw.
+                                        Diverse
+                                        brandverzekeraars aanvaarden dit rooster om bij schade (onbeperkt) te
+                                        regelen boven het
+                                        kapitaal waarop de jaarlijkse premie wordt berekend (het excedent)!
+                                        <br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Algemeen">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfFireGenerally" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfFireGenerally.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Woning">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfFireHouse" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfFireHouse.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Preventie">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfFireBurglary" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfFireBurglary.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                </tabset>
+            </div>
+        </div>
+    </section>
+</div>

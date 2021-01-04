@@ -1,0 +1,134 @@
+<!-- <app-countdown></app-countdown> -->
+<div *ngIf="form">
+  <!-- PAGE HEADER -->
+  <header id="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 m-auto text-center">
+          <h1>{{ 'CONTACT.Title' | translate }}</h1>
+          <p>{{ 'CONTACT.TitleIntro' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-3">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card p-4">
+            <div class="card-body">
+              <!-- <app-my-counter></app-my-counter> -->
+              <button class="btn btn-success mb-1 mr-1"
+                (click)="onOfficeModal()">{{ 'CONTACT.OfficeHoursLabel' | translate }}</button>
+              <button class="btn btn-danger mb-1 mr-1"
+                (click)="onMeetupModal()">{{ 'CONTACT.MeetupLabel' | translate }}</button>
+              <a class="btn btn-primary mb-1 mr-1" type="button"
+                href="https://secure.brokertools.be/beleggersprofiel/?partnerid=0d6a6d64fc6jfze512e512d1s21g1879f5d5"
+                target="_blank">Uw Beleggers-Profiel</a>
+              <br><br>
+              <h6>{{ 'CONTACT.CompanyNumberLabel' | translate }}</h6>
+              <h6>{{ 'CONTACT.NameLabel' | translate }}</h6>
+              <h6>{{ 'CONTACT.AddressLabel' | translate }}</h6>
+              <h6>{{ 'CONTACT.MailLabel' | translate }}</h6>
+              <br>
+              <h6>{{ 'CONTACT.PhoneLabel' | translate }}</h6>
+              <h6>{{ 'CONTACT.MobileLabel' | translate }}</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="card p-4">
+            <div class="card-body">
+              <h3 class="text-center">{{ 'CONTACT.MessageTitle' | translate }}</h3>
+              <div *ngFor="let alert of alerts">
+                <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">
+                  {{ alert.msg }}</alert>
+              </div>
+              <form [formGroup]="form" (ngSubmit)="submitContactMail()">
+                <div class="row">
+                  <div class="col-md-6">
+                    <vsoft-nx-text-input
+                      formControlName="name"
+                      label="{{ 'CONTACT.MessageNameLabel' | translate }}"
+                      warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+                    ></vsoft-nx-text-input>
+                  </div>
+                  <div class="col-md-6">
+                    <vsoft-nx-text-input
+                      formControlName="rR"
+                      label="{{ 'CONTACT.MessageRRLabel' | translate }}"
+                      warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+                    ></vsoft-nx-text-input>
+                  </div>
+                  <div class="col-md-6">
+                    <vsoft-nx-text-input
+                      formControlName="email"
+                      label="{{ 'CONTACT.MessageMailLabel' | translate }}"
+                      warningMessage="{{ 'COMMON.InvalidEmail' | translate }}"
+                    ></vsoft-nx-text-input>
+                  </div>
+                  <div class="col-md-6">
+                    <vsoft-nx-text-input
+                      formControlName="phone"
+                      label="{{ 'CONTACT.MessagePhoneLabel' | translate }}"
+                    ></vsoft-nx-text-input>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-control" formControlName="message"
+                        placeholder="{{ 'CONTACT.MessageTextLabel' | translate }}"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" formControlName="copySender">
+                          {{ 'CONTACT.CheckCCLabel' | translate }}</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div *ngIf="!busy">
+                        <button type="submit" [disabled]="!form.valid"
+                          class="btn btn-primary btn-block">{{ 'CONTACT.MessageSendLabel' | translate }}</button>
+                      </div>
+                      <div *ngIf="busy">
+                        <button type="submit" disabled class="btn btn-primary btn-block">Bezig...</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- STAFF -->
+<!-- <section id="staff" class="py-5 text-center bg-dark text-white">
+    <div class="container">
+        <h1>Zaakvoerder</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="assets/img/jos.jpg" alt="" class="img-fluid rounded-circle mb-2">
+                <h4>Jos Vermoesen</h4>
+                <small>josvermoesen@rv.be</small>
+            </div>
+        </div>
+    </div>
+</section> -->

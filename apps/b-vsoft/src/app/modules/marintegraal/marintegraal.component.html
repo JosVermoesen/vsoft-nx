@@ -1,0 +1,119 @@
+<!-- ACCORDION -->
+<section id="accordeon" class="text-center py-2">
+    <div class="container">
+        <accordion [isAnimated]="true" [closeOthers]="accordeonOneAtATime">
+            <accordion-group heading="Tarieven">
+                <div class="text-left">
+                    <div class="card border-primary mb-resp">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-primary">Contract type</th>
+                                        <th class="bg-primary text-right">Per jaar</th>
+                                        <th class="bg-primary text-right">Maandelijks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>marIntegraal Servicecontract PLUS (MSP)</td>
+                                        <td class="text-right">€1.920,00</td>
+                                        <td class="text-right">€160,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>marIntegraal Servicecontract 1985 (M85)</td>
+                                        <td class="text-right">€1.200,00</td>
+                                        <td class="text-right">€100,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>marIntegraal Updatecontract (MUC)</td>
+                                        <td class="text-right">€720,00</td>
+                                        <td class="text-right">€60,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Optie Forfait verplaatsing, (telefonische) hulp bij (her)opstart
+                                            besturingssysteem, diverse oplossingen, per 2 uur</td>
+                                        <td class="text-right">€242,00</td>
+                                        <td class="text-right">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>(Uitsluitend) telefonische interventie bij updatecontracten: per
+                                            interventie
+                                            forfait Optie Forfait (vooruitbetaalbaar via overschrijving)</td>
+                                        <td class="text-right">€100,00</td>
+                                        <td class="text-right">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-resp">
+                    <div class="card-body">
+                        <div *ngIf="contentfulContractTypesEntry">
+                            <div class="text-left">
+                                <div [innerHTML]="contentfulContractTypesEntry.fields.markdownText | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+            <accordion-group heading="Documenten">
+                <div class="text-left">
+                    <!-- Some text
+                    <p>This content is a paragraph</p>
+                    <p>Another paragraph</p> -->
+                </div>
+            </accordion-group>
+            <accordion-group heading="Update Historiek" [isOpen]="accordeonUpdateOpen">
+                <div *ngIf="contentfulUpdatesEntry">
+                    <div class="text-left">
+                        <div [innerHTML]="contentfulUpdatesEntry.fields.markdownText | mdToHtml"></div>
+                    </div>
+                </div>
+            </accordion-group>
+        </accordion>
+    </div>
+</section>
+
+<!-- BOXES -->
+<section id="boxes">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center border-primary mb-resp">
+                    <div class="card-body">
+                        <h3 class="text-primary">{{ 'COMMON.BoxLabel1' | translate }}</h3>
+                        <p class="text-muted"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white mb-resp">
+                    <div class="card-body">
+                        <h3>{{ 'COMMON.BoxLabel2' | translate }}</h3>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center border-primary mb-resp">
+                    <div class="card-body">
+                        <h3 class="text-primary">{{ 'COMMON.BoxLabel3' | translate }}</h3>
+                        <p class="text-muted"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white">
+                    <div class="card-body">
+                        <h3>{{ 'COMMON.BoxLabel4' | translate }}</h3>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

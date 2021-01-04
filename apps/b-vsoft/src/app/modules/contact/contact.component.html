@@ -1,0 +1,125 @@
+<div *ngIf="form">
+    <!-- PAGE HEADER -->
+    <header id="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1>{{ 'CONTACT.Title' | translate }}</h1>
+                    <p>{{ 'CONTACT.TitleIntro' | translate }}</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h3 class="text-center">{{ 'CONTACT.MessageTitle' | translate }}</h3>
+                            <div *ngFor="let alert of alerts">
+                                <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout"
+                                    (onClosed)="onClosed(alert)">
+                                    {{ alert.msg }}</alert>
+                            </div>
+                            <form [formGroup]="form" (ngSubmit)="submitContactMail()">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" formControlName="name" class="form-control"
+                                                placeholder="{{ 'CONTACT.MessageNameLabel' | translate }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" formControlName="rR" class="form-control"
+                                                placeholder="{{ 'CONTACT.MessageRRLabel' | translate }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" formControlName="email" class="form-control"
+                                                placeholder="{{ 'CONTACT.MessageMailLabel' | translate }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" formControlName="phone" class="form-control"
+                                                placeholder="{{ 'CONTACT.MessagePhoneLabel' | translate }}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" formControlName="message"
+                                                placeholder="{{ 'CONTACT.MessageTextLabel' | translate }}"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        formControlName="copySender">
+                                                    {{ 'CONTACT.CheckCCLabel' | translate }}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div *ngIf="!busy">
+                                                <button type="submit" [disabled]="!form.valid"
+                                                    class="btn btn-primary btn-block">{{ 'CONTACT.MessageSendLabel' | translate }}</button>
+                                            </div>
+                                            <div *ngIf="busy">
+                                                <button type="submit" disabled
+                                                    class="btn btn-primary btn-block">Bezig...</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h5>{{ 'CONTACT.LocationLabel' | translate }}</h5>
+                            <button class="btn btn-danger"
+                                (click)="onOfficeModal()">{{ 'CONTACT.IntroLabel' | translate }}</button>
+                            <p> </p>
+                            <h5>{{ 'CONTACT.AddressLabel' | translate }}</h5>
+                            <p>Grote Baan 141 | B-9310 Herdersem</p>
+                            <h5>{{ 'CONTACT.MailLabel' | translate }}</h5>
+                            <p>info@rv.be</p>
+                            <h6>{{ 'CONTACT.PhoneLabel' | translate }}</h6>
+                            <p>+32 (0)53 21 59 25</p>
+                            <h6>{{ 'CONTACT.MobileLabel' | translate }}</h6>
+                            <p>+32 (0)475 29 22 55</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- STAFF -->
+<!-- <section id="staff" class="py-5 text-center bg-dark text-white">
+    <div class="container">
+        <h1>Zaakvoerder</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="assets/img/jos.jpg" alt="" class="img-fluid rounded-circle mb-2">
+                <h4>Jos Vermoesen</h4>
+                <small>josvermoesen@rv.be</small>
+            </div>
+        </div>        
+    </div>
+</section> -->

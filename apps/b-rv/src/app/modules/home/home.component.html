@@ -1,0 +1,110 @@
+<!-- SECTION CAROUSEL -->
+<section id="showcase">
+  <carousel>
+    <!--
+    Use your own images or generate some random suitable to your preferences
+    https://source.unsplash.com/random/1920x1280/?accounting
+    https://source.unsplash.com/random/1920x1280/?hosting
+    https://source.unsplash.com/random/1920x1280/?apps
+    -->
+    <slide>
+      <img src="{{ 'HOME.Carousel-Image1' | translate }}" alt="{{ 'HOME.Carousel-Alt1' | translate }}"
+        style="display: block; width: 100%;">
+      <div class="carousel-caption d-md-block">
+        <h1 class="display-4">{{ 'HOME.Carousel-Title1' | translate }}</h1>
+        <p class="lead">{{ 'HOME.Carousel-SubTitle1' | translate }}</p>
+        <a routerLink="{{ 'HOME.Carousel-Link1' | translate }}" target="{{ 'HOME.Carousel-TargetLink1' | translate }}"
+          class="{{ 'HOME.Carousel-ButtonClass1' | translate }}">{{ 'HOME.Carousel-ButtonLabel1' | translate }}</a>
+      </div>
+    </slide>
+    <slide>
+      <img src="{{ 'HOME.Carousel-Image2' | translate }}" alt="{{ 'HOME.Carousel-Alt2' | translate }}"
+        style="display: block; width: 100%;">
+      <div class="carousel-caption d-md-block">
+        <h1 class="display-4">{{ 'HOME.Carousel-Title2' | translate }}</h1>
+        <p class="lead">{{ 'HOME.Carousel-SubTitle2' | translate }}</p>
+        <a routerLink="{{ 'HOME.Carousel-Link2' | translate }}" target="{{ 'HOME.Carousel-TargetLink2' | translate }}"
+          class="{{ 'HOME.Carousel-ButtonClass2' | translate }}">{{ 'HOME.Carousel-ButtonLabel2' | translate }}</a>
+      </div>
+    </slide>
+    <slide>
+      <img src="{{ 'HOME.Carousel-Image3' | translate }}" alt="{{ 'HOME.Carousel-Alt3' | translate }}"
+        style="display: block; width: 100%;">
+      <div class="carousel-caption d-md-block">
+        <h1 class="display-4">{{ 'HOME.Carousel-Title3' | translate }}</h1>
+        <p class="lead">{{ 'HOME.Carousel-SubTitle3' | translate }}</p>
+        <a routerLink="{{ 'HOME.Carousel-Link3' | translate }}" target="{{ 'HOME.Carousel-TargetLink3' | translate }}"
+          class="{{ 'HOME.Carousel-ButtonClass3' | translate }}">{{ 'HOME.Carousel-ButtonLabel3' | translate }}</a>
+      </div>
+    </slide>
+  </carousel>
+</section>
+
+<!--SECTION ICON (FONTAWESOME 6!) -->
+<section id="home-icons" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 text-center">
+        <i>
+          <fa-icon class="fa-3x mb-2" [icon]="faFire"></fa-icon>
+        </i>
+        <h3>{{ 'HOME.Icon-Label1' | translate }}</h3>
+        <p>{{ 'HOME.Icon-SubLabel1' | translate }}</p>
+      </div>
+      <div class="col-md-4 mb-4 text-center">
+        <i>
+          <fa-icon class="fa-3x mb-2" [icon]="faCar"></fa-icon>
+        </i>
+        <h3>{{ 'HOME.Icon-Label2' | translate }}</h3>
+        <p>{{ 'HOME.Icon-SubLabel2' | translate }}</p>
+      </div>
+      <div class="col-md-4 mb-4 text-center">
+        <i>
+          <fa-icon class="fa-3x mb-2" [icon]="faCalculator"></fa-icon>
+        </i>
+        <h3>{{ 'HOME.Icon-Label3' | translate }}</h3>
+        <p>{{ 'HOME.Icon-SubLabel3' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOXES -->
+<section id="boxes">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card text-center border-primary mb-resp">
+          <div class="card-body">
+            <h3 class="text-primary">{{ 'COMMON.BoxLabel1' | translate }}</h3>
+            <p class="text-muted"> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primary text-white mb-resp">
+          <div class="card-body">
+            <h3>{{ 'COMMON.BoxLabel2' | translate }}</h3>
+            <p> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center border-primary mb-resp">
+          <div class="card-body">
+            <h3 class="text-primary">{{ 'COMMON.BoxLabel3' | translate }}</h3>
+            <p class="text-muted"> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primary text-white">
+          <div class="card-body">
+            <h3>{{ 'COMMON.BoxLabel4' | translate }}</h3>
+            <p> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

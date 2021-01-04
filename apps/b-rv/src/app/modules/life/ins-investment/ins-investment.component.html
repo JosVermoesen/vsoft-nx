@@ -1,0 +1,17 @@
+<!-- BROCOM SECTORCATALOG SECTION -->
+<section id="brocom-ilife" class="py-1">
+    <div class="container">
+        <!-- <div class="card text-center bg-primary text-white mb-resp"> or try this! -->
+        <!-- <div class="card text-center border-primary mb-resp"> or try this! -->
+        <div class="card text-center bg-secondary border-primary mb-resp">
+            <div class="card-body">
+                <div *ngIf="contentfulItem">
+                    <div class="text-left">
+                        <div [innerHTML]="contentfulItem.fields.mdTextBody | mdToHtml">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

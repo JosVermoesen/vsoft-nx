@@ -1,0 +1,68 @@
+<div class="container">
+    <div id="contactstepper" class="bs-stepper">
+        <div class="bs-stepper-header">
+            <div class="step" data-target="#contact-l-1">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">1</span>
+                    <span class="bs-stepper-label">Id</span>
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#contact-l-2">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">2</span>
+                    <span class="bs-stepper-label">Contact</span>
+                </button>
+            </div>
+            <div class="line"></div>
+            <div class="step" data-target="#contact-l-3">
+                <button class="step-trigger">
+                    <span class="bs-stepper-circle">3</span>
+                    <span class="bs-stepper-label">Bericht</span>
+                </button>
+            </div>
+        </div>
+        <div class="bs-stepper-content">
+            <!-- <form (ngSubmit)="onSubmit()"> -->
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div id="contact-l-1" class="content">
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Naam" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="rR" id="rR"
+                            placeholder="Rijksregister nr." />
+                    </div>
+                    <button (click)="contactNext()" class="btn btn-primary">Volgende</button>
+                </div>
+                <div id="contact-l-2" class="content">
+                    <div class="form-group">
+                        <input type="email" class="form-control" formControlName="email" id="email"
+                            placeholder="Email adres" />
+                    </div>
+                    <div class="form-group">
+                        <input type="phone" class="form-control" formControlName="phone" id="phone"
+                            placeholder="Telefoon" />
+                    </div>
+                    <button (click)="contactPrevious()" class="btn btn-primary">Vorige</button>
+                    <button (click)="contactNext()" class="btn btn-primary ml-2">Volgende</button>
+                </div>
+                <div id="contact-l-3" class="content">
+                    <div class="form-group">
+                        <textarea class="form-control" formControlName="message" id="message"
+                            placeholder="Bericht"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" formControlName="copySender">
+                                {{ 'CONTACT.CheckCCLabel' | translate }}</label>
+                        </div>
+                        <button (click)="contactPrevious()" class="btn btn-primary mt-3">Vorige</button>
+                        <button type="submit" [disabled]="!contactForm.valid" class="btn btn-primary ml-2 mt-3">Submit</button>
+                    </div>                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

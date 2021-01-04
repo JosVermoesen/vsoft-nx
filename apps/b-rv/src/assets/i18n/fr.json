@@ -1,0 +1,118 @@
+{
+    "FOOTER": {
+        "Title": "Vermoesen Beheer Gcv"
+    },
+    "COMMON": {
+        "BoxLabel1": "Beter",
+        "BoxLabel2": "Slimmer",
+        "BoxLabel3": "Sneller",
+        "BoxLabel4": "Sterker",
+        "IsRequired": "is verplicht",
+        "InvalidEmail": "Ongeldig email adres"
+    },
+    "NAVBAR": {
+        "NavTitle": "Roelandt & Vermoesen 1935",
+        "NavAbout": "Deze App",
+        "NavDashBoard": "Menu",
+        "NavContact": "Welkom",
+        "NavSettings": "Instellingen",
+        "LanguageModalTitle": "Kies uw taal:",
+        "LanguageModalCloseBtnName": "Sluiten"
+    },
+
+    "ABOUT": {
+        "Seo-Title": "Roelandt & Vermoesen 1935",
+        "Seo-Keywords": "brandverzekering, autoverzekering, rechtsbijstand, assistance, zorgverzekering, schadebeheer",
+        "Seo-Description": "Roelandt & Vermoesen Zakenkantoor sinds 1935 ",
+        "MainTitle": "Over deze App",
+        "MainSub": "Eenvoudige single page toepassing ontwikkeld met Angular en o.a. ngx-translate.",
+        "Title": "Open Source",
+        "Sub": "Op onze github pagina vind U de broncode van deze toepassing voor download en studie.",
+        "MoveToUrl": "https://github.com/JosVermoesen/ngb-rv",
+        "MoveToButton": "Broncode op Github",
+        "Image": "assets/images/about/about2.jfif"
+    },
+
+    "CONTACT": {
+        "Seo-Title": "Roelandt & Vermoesen 1935",
+        "Seo-Keywords": "brandverzekering, autoverzekering, rechtsbijstand, assistance, zorgverzekering, schadebeheer",
+        "Seo-Description": "Roelandt & Vermoesen Zakenkantoor sinds 1935 ",
+        "Title": "Welkom",
+        "TitleIntro": "Maak een afspraak, vraag een MeetUp code of stuur gewoon een berichtje",
+        "OfficeHoursLabel": "Kantoor",
+        "MeetupLabel": "MeetUp",
+
+        "CompanyNumberLabel": "BE0440.058.217 - FSMA: 011578",
+        "NameLabel": "Roelandt & Vermoesen bv",
+        "AddressLabel": "Grote Baan 141 | B-9310 Herdersem",
+        "MailLabel": "Email: info@rv.be",
+        "PhoneLabel": "Telefoon: +32 53 21 59 25 (uitsluitend klanten 24/24)",
+        "MobileLabel": "WhatsApp: +32 475 29 22 55 (enkel foto en tekst a.u.b.)",
+
+        "MessageTitle": "Stuur ons een bericht",
+        "MessageNameLabel": "Naam en Voornaam",
+        "MessageRRLabel": "Rijksregister",
+        "MessageMailLabel": "Email",
+        "MessagePhoneLabel": "Telefoon",
+        "MessageTextLabel": "Uw bericht *",
+        "CheckCCLabel": "Bezorg me eveneens een kopie",
+        "MessageSendLabel": "Verzenden",
+        "SendSuccess": "Verzending is gelukt",
+        "SendFailed": "Verzending is mislukt"
+    },
+
+    "COUNTDOWN": {
+        "WelcomeLeft": "Goede",
+        "WelcomeMorning": "morgen",
+        "WelcomeAfternoon": "middag",
+        "WelcomeEvening": "avond",
+        "MessageClosed": "Kantoor gesloten. Opent binnen:",
+        "MessageOpen": "Kantoor open. Sluit binnen:"
+    },
+
+    "MAILFORM": {
+        "Seo-Title": "Roelandt & Vermoesen 1935",
+        "Seo-Keywords": "brandverzekering, autoverzekering, rechtsbijstand, assistance, zorgverzekering, schadebeheer",
+        "Seo-Description": "Roelandt & Vermoesen Zakenkantoor sinds 1935 "
+    },
+
+    "HOME": {
+        "Seo-Title": "Roelandt & Vermoesen 1935",
+        "Seo-Keywords": "brandverzekering, autoverzekering, rechtsbijstand, assistance, zorgverzekering, schadebeheer",
+        "Seo-Description": "Roelandt & Vermoesen Zakenkantoor sinds 1935 ",
+
+        "Carousel-Image1": "assets/images/home/fire.jpg",
+        "Carousel-Alt1": "eerste slide",
+        "Carousel-Link1": "/ins-fire",
+        "Carousel-TargetLink1": "_self",
+        "Carousel-Title1": "Brand verzekering",
+        "Carousel-SubTitle1": "Als de rook om je hoofd is verdwenen...",
+        "Carousel-ButtonLabel1": "Info",
+        "Carousel-ButtonClass1": "btn btn-primary btn-lg",
+
+        "Carousel-Image2": "assets/images/home/car.jpg",
+        "Carousel-Alt2": "tweede slide",
+        "Carousel-Link2": "/ins-car",
+        "Carousel-TargetLink2": "_self",
+        "Carousel-Title2": "Auto verzekering",
+        "Carousel-SubTitle2": "Zorgeloos de baan op!",
+        "Carousel-ButtonLabel2": "Info",
+        "Carousel-ButtonClass2": "btn btn-success btn-lg",
+
+        "Carousel-Image3": "assets/images/home/tax2.jpg",
+        "Carousel-Alt3": "derde slide",
+        "Carousel-Link3": "/tow",
+        "Carousel-TargetLink3": "_self",
+        "Carousel-Title3": "Tax On Web",
+        "Carousel-SubTitle3": "Onze jaarlijkse dienstverlening TOW voor trouw cliënteel",
+        "Carousel-ButtonLabel3": "Info",
+        "Carousel-ButtonClass3": "btn btn-danger btn-lg",
+
+        "Icon-Label1": "Verzekering Brand",
+        "Icon-SubLabel1": "Gebouw onbeperkt, inhoud eerste risico, bijstand, diefstal",
+        "Icon-Label2": "Verzekering Auto",
+        "Icon-SubLabel2": "B.A., omnium, inzittenden, bijstand, recht",
+        "Icon-Label3": "TOW Service",
+        "Icon-SubLabel3": "Onze jaarlijkse optimalisatie belastingsaangifte voor particulieren"
+    }
+}

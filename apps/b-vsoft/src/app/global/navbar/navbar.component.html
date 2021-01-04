@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container">
+    <a routerLink="/home" class="navbar-brand">{{ 'NAVBAR.NavTitle' | translate }}</a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <fa-icon class="fa-1x mb-2" [icon]="faBars"></fa-icon>
+      <span class=""></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a routerLink="/contact" data-toggle="collapse" data-target=".navbar-collapse.show"
+            class="nav-link">{{ 'NAVBAR.NavContact' | translate }}</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/marintegraal" data-toggle="collapse" data-target=".navbar-collapse.show"
+            class="nav-link">marIntegraal</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/hosting" data-toggle="collapse" data-target=".navbar-collapse.show"
+            class="nav-link">Hosting</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" data-toggle="collapse" data-target=".navbar-collapse.show"
+            class="nav-link">{{ 'NAVBAR.NavAbout' | translate }}</a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a (click)="onLanguageModal()">
+            <fa-icon class="fa-2x" [icon]="faGlobe"></fa-icon>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>

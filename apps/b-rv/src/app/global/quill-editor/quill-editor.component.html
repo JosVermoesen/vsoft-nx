@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 id="focusBlur">Default editor with height of 200px</h3>
+
+  <p>focused: {{ focused }}, blurred: {{ blurred }}</p>
+
+  <quill-editor [styles]="{height: '200px'}" [(ngModel)]="htmlContent" (onFocus)="focus($event)"
+    (onEditorChanged)="changedEditor($event)" (onBlur)="blur($event)" (onEditorCreated)="created($event)">
+  </quill-editor>
+
+  <button class="btn btn-danger" (click)="showHtml()">Html</button>
+
+
+
+  <div class="form-group">
+    <div class="input-group">
+      <select (change)="setMailTemplate($event.target.value)" class="custom-select">
+        <option *ngFor="let template of foldersAndNames">
+          {{ template}}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- <div class="input-group">
+    <select (change)="setMailTemplate($event)">
+      <option *ngFor="let item of foldersAndNames">
+        {{ item }}
+      </option>
+    </select>
+  </div> -->
+
+</div>

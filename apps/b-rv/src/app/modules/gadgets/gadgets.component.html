@@ -1,0 +1,134 @@
+<div *ngIf="form">
+  <!-- PAGE HEADER -->
+  <header id="page-header">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-6 m-auto text-center">
+          <h2>GDPR en Gadgets 2021</h2>
+          <!-- <p>Graag ons info te bezorgen via dit formulier</p> -->
+        </div>
+      </div>
+      <!-- <button class="btn btn-success" (click)="refreshTemplateBody()">Test</button> -->
+    </div>
+  </header>
+
+  <!-- MAILFORM SECTION -->
+  <section id="contact" class="py-3">
+    <div class="container">
+      <div class="card p-4">
+        <div class="card-body">
+          <h3 class="text-center">Uw voorkeur</h3>
+          <div *ngFor="let alert of alerts">
+            <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">
+              {{ alert.msg }}</alert>
+          </div>
+
+          <form [formGroup]="checkForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" formControlName="g102" class="form-check-input">Grote
+                      hangkalender 2021
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" formControlName="g103" class="form-check-input">Druivelaer scheurkalender
+                      2021
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" formControlName="g104" class="form-check-input">Brepols zak-agenda 2021
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" formControlName="g105" class="form-check-input">Brepols bureau-agenda 2021
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Voorkeur verzendwijze:</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select formControlName="g101" class="form-control">
+                    <option selected [ngValue]="null" disabled>Maak uw keuze</option>
+                    <option *ngFor="let item of sendOptions" [ngValue]="item">
+                      {{ item.option }}
+                    </option>
+                  </select>
+                  <div *ngIf="checkForm.invalid && checkForm.controls['g101'].touched">
+                    <label style="color:red">Verzendwijze kiezen a.u.b.</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form [formGroup]="form" (ngSubmit)="submitGadgetMail()">
+
+            <div class="row">
+              <div class="col-md-6">
+                <vsoft-nx-text-input
+                  formControlName="name"
+                  label="{{ 'CONTACT.MessageNameLabel' | translate }}"
+                  warningMessage="{{ 'COMMON.IsRequired' | translate }}">
+                </vsoft-nx-text-input>
+              </div>
+
+              <div class="col-md-6">
+                <vsoft-nx-text-input
+                  formControlName="email"
+                  label="{{ 'CONTACT.MessageMailLabel' | translate }}"
+                  warningMessage="{{ 'COMMON.InvalidEmail' | translate }}">
+                </vsoft-nx-text-input>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div *ngIf="!busy">
+                    <button type="submit" [disabled]="!(checkForm.valid && form.valid)"
+                      class="btn btn-primary btn-block">{{ 'CONTACT.MessageSendLabel' | translate }}</button>
+                  </div>
+                  <div *ngIf="busy">
+                    <button type="submit" disabled class="btn btn-primary btn-block">Bezig...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

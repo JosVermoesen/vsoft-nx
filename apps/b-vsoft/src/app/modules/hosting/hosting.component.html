@@ -1,0 +1,133 @@
+<!-- ACCORDION -->
+<section id="accordeon" class="text-center py-2">
+    <div class="container">
+        <accordion [isAnimated]="true" [closeOthers]="accordeonOneAtATime">
+            <accordion-group heading="Video's">
+                <div class="text-left">
+                    <!-- Some text
+                    <p>This content is a paragraph</p>
+                    <p>Another paragraph</p> -->
+                </div>
+            </accordion-group>
+
+            <accordion-group heading="Tarieven" [isOpen]="accordeonHostingOpen">
+                <div class="text-left">
+                    <div class="card border-primary mb-resp">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-primary">Dotnet Core 3.1</th>
+                                        <th class="bg-primary text-center">Hosting 1</th>
+                                        <th class="bg-primary text-center">Hosting 3</th>
+                                        <th class="bg-primary text-center">Hosting 5</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Prijs/maand</td>
+                                        <td class="text-center">€ 8,25</td>
+                                        <td class="text-center">€ 16,50</td>
+                                        <td class="text-center">€ 24,75</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Web Sites</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">3</td>
+                                        <td class="text-center">5</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Schijfruimte</td>
+                                        <td class="text-center">1 GB</td>
+                                        <td class="text-center">4 GB</td>
+                                        <td class="text-center">7 GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data/maand</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mail accounts</td>
+                                        <td class="text-center">2</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Subdomeinen</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                        <td class="text-center">Onbeperkt</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Plesk</td>
+                                        <td class="text-center">Ja</td>
+                                        <td class="text-center">Ja</td>
+                                        <td class="text-center">Ja</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SpamExperts</td>
+                                        <td class="text-center">Ja</td>
+                                        <td class="text-center">Ja</td>
+                                        <td class="text-center">Ja</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Domein (.be .com e.a.)</td>
+                                        <td class="text-center">Ja</td>
+                                        <td class="text-center">Ja</td>
+                                        <td class="text-center">Ja</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </accordion-group>
+
+        </accordion>
+    </div>
+</section>
+
+<!-- BOXES -->
+<section id="boxes">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center border-primary mb-resp">
+                    <div class="card-body">
+                        <h3 class="text-primary">{{ 'COMMON.BoxLabel1' | translate }}</h3>
+                        <p class="text-muted"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white mb-resp">
+                    <div class="card-body">
+                        <h3>{{ 'COMMON.BoxLabel2' | translate }}</h3>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center border-primary mb-resp">
+                    <div class="card-body">
+                        <h3 class="text-primary">{{ 'COMMON.BoxLabel3' | translate }}</h3>
+                        <p class="text-muted"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center bg-primary text-white">
+                    <div class="card-body">
+                        <h3>{{ 'COMMON.BoxLabel4' | translate }}</h3>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

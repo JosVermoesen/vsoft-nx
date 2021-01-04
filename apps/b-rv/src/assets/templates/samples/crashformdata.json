@@ -1,0 +1,47 @@
+[
+    {
+        "version": 1,
+        "derivedFrom": "www.telebib2.org/Namespace/2015/Entities EuropeanAccidentNotificationQrData",
+        "insured": {
+            "firstname": "HARRY",
+            "lastname": "STEENHAUT",
+            "birthdate": "- -"
+        },
+        "vehicle": {
+            "brand": "RENAULT",
+            "type": "CLIO",
+            "licensePlate": "1.DKO.030",
+            "country": "BE"
+        },
+        "insurer": {
+            "name": "OPTIMCO",
+            "id": "002393",
+            "contractNumber": "156318",
+            "valid_from": "2020-07-27",
+            "valid_until": "2021-07-27",
+            "representativeID": "BE440058217",
+            "representativeEmail": "info@rv.be"
+        }
+    },
+    {
+        "version": 1,
+        "insured": {
+            "firstname": "ANNA-MARIE",
+            "lastname": "HUYLEBROECK"
+        },
+        "vehicle": {
+            "brand": "MERCEDES",
+            "type": "180",
+            "licensePlate": "FWY427",
+            "country": "BE"
+        },
+        "insurer": {
+            "id": "000039",
+            "contractNumber": "616 006 194",
+            "valid_from": "2020-08-25",
+            "valid_until": "2021-09-15",
+            "representativeID": "0440058217",
+            "representativeEmail": ""
+        }
+    }
+]

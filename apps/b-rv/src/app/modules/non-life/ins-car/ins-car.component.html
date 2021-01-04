@@ -1,0 +1,164 @@
+<!-- PAGE HEADER -->
+<header id="page-header">
+    <div class="container">
+        <div class="row mt-1">
+            <div class="col-md-6 m-auto text-center">
+                <h1>Verzekering Voertuig</h1>
+                <!-- <p>Intro eventueel</p> -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENTFUL TAB SECTION -->
+<div *ngIf="cfCivilLiability">
+    <section id="icar-tabs">
+        <div class="container">
+            <div class="row">
+                <tabset #staticTabs class="bg-secondary">
+
+                    <tab heading="Formulieren">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card text-center border-primary mb-resp">
+                                    <a href="https://docserver.rv-services.be/!pdfDocumenten/VoorstelAutoInformatieplicht.pdf"
+                                        target="_blank" class="nav-link">Verzekeringsvoorstel</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-center border-primary mb-resp">
+                                    <a target="_blank" class="nav-link"
+                                        href="https://www.binex.be/car/nl/011578">Tariefaanvraag
+                                    </a>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card text-center border-primary mb-resp">
+                                    <a href="https://docserver.rv-services.be/!pdfDocumenten/opvragenSchadeverleden.pdf"
+                                        target="_blank" class="nav-link">Aanvraag Attest (manueel)</a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="card border-primary mb-resp">
+                                    <div class="ml-3 mt-3 mr-3">
+                                        <div *ngIf="carDamageCertificateHtml">
+                                            <div [innerHTML]="carDamageCertificateHtml | mdToHtml"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Tariefmodule">
+                        <div class="card border-primary mb-resp">
+                            <iframe src="https://www.binex.be/car/nl/011578" width="100%" height="600"
+                                scrolling="auto">
+                                Sorry je browser ondersteunt geen iFrames
+                            </iframe>
+                        </div>
+                    </tab>
+
+                    <tab heading="B.A. (groene kaart)">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfCivilLiability" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfCivilLiability.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Omnium">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfVehicle" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfVehicle.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Bestuurder">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfDriver" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfDriver.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Rechtsbijstand">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfLegalAssistance" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfLegalAssistance.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                    <tab heading="Reisbijstand">
+                        <div class="card border-primary mb-resp">
+                            <div *ngIf="cfTravelAssistance" class="ml-3 mt-3 mr-3">
+                                <div [innerHTML]="cfTravelAssistance.fields.mdTextBody | mdToHtml">
+                                </div>
+                            </div>
+                        </div>
+                    </tab>
+
+                </tabset>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BROCOM IFRAME SECTION -->
+<!-- <section id="brocom-iframe" class="py-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <iframe width="100%" height="600"
+                    src="https://www.makelaarinverzekeringen.be/ibpview/minisite-auto-nl?ibp=true">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- BROCOM SECTORCATALOG SECTION -->
+<!-- <section id="brocom-icar" class="py-1">
+    <div class="container">
+        <div class="card text-center bg-primary text-white mb-resp">
+            <div class="card-body">
+                <p>ins-car works!</p>
+            </div>
+        </div>
+    </div>
+</section> -->
