@@ -34,9 +34,7 @@
     },
     "vsoft-nx-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "vsoft-nx"
-      ]
+      "implicitDependencies": ["vsoft-nx"]
     },
     "shared-ui": {
       "tags": []
@@ -46,42 +44,39 @@
     },
     "shared-ui-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "shared-ui"
-      ]
+      "implicitDependencies": ["shared-ui"]
     },
     "privacy-ui-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "privacy-ui"
-      ]
+      "implicitDependencies": ["privacy-ui"]
     },
     "b-vsoft": {
       "tags": []
     },
     "b-vsoft-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "b-vsoft"
-      ]
+      "implicitDependencies": ["b-vsoft"]
     },
     "b-cdd": {
       "tags": []
     },
     "b-cdd-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "b-cdd"
-      ]
+      "implicitDependencies": ["b-cdd"]
     },
     "b-rv": {
       "tags": []
     },
     "b-rv-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "b-rv"
-      ]
+      "implicitDependencies": ["b-rv"]
+    },
+    "b-ledgerentry": {
+      "tags": []
+    },
+    "b-ledgerentry-e2e": {
+      "tags": [],
+      "implicitDependencies": ["b-ledgerentry"]
     }
   }
 }
