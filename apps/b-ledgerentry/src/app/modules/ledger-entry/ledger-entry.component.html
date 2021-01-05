@@ -65,7 +65,9 @@
               <div [ngStyle]="{'color':getColor(item.dcOption)}">
                 <span>{{ item.amount | currency:'EUR' }}</span>
               </div>
-              <i (click)="onDelete(item)" class="fa fa-remove"></i>
+              <button type="button" class="close" aria-label="Close" (click)="onDelete(item)">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </li>
           </ul>
         </div>
