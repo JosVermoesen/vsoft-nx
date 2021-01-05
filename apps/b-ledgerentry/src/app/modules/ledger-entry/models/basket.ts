@@ -1,4 +1,4 @@
-import { FGuid } from '../../../shared/functions/guid';
+import { Guid } from '@vsoft-nx/shared-ui';
 
 export interface IBasket {
   id: string;
@@ -17,7 +17,7 @@ export interface IBasketItem {
 }
 
 export class Basket implements IBasket {
-  id = FGuid();
+  id = Guid();
   items: IBasketItem[] = [];
   description: string;
   entryDate: string;

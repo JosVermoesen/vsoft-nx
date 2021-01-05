@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as moment from 'moment';
 
 import { BasketService } from './services/basket.service';
-import { FGuid } from '../../shared/functions/guid';
+import { Guid } from '@vsoft-nx/shared-ui';
 import { Observable } from 'rxjs';
 import { IBasket, IBasketItem, IBasketSolde } from './models/basket';
 
@@ -89,7 +89,7 @@ export class LedgerEntryComponent implements OnInit {
     this.readyForBooking = false;
 
     this.ledgerEntryForm = this.fb.group({
-      id: FGuid(),
+      id: Guid(),
       dcOption: [null, Validators.required],
       amount: [null, [Validators.required, Validators.min(0.01)]],
       account: [
@@ -152,6 +152,5 @@ export class LedgerEntryComponent implements OnInit {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  clearEntry() { }
+  // clearEntry() { }
 }

@@ -10,13 +10,10 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 import * as moment from 'moment';
 
-import { Uuid } from '../../../_functions/uuid';
-// import { checkIBAN } from '../../../_functions/checkIban';
-import { IbanCheck } from '@vsoft-nx/shared-ui';
+import { Guid, IbanCheck} from '@vsoft-nx/shared-ui';
 
 import { DomService } from '../../../_services/dom.service';
 import { DomEntry } from '../../../_models/domEntry';
-// import { checkIBAN } from 'vsoftvalidation';
 
 @Component({
   selector: 'vsoft-nx-domentry',
@@ -61,7 +58,7 @@ export class DomEntryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.initErrorMessages();
+    // this.initErrorMessages();
     this.domJson = JSON.parse(localStorage.getItem('cddEntries_Template'));
     // Subscribe to the selectedLog observable
     this.domService.selectedDomEntry.subscribe((entry: DomEntry) => {
@@ -71,7 +68,7 @@ export class DomEntryComponent implements OnInit {
         this.lockSwitch();
         this.selectTab(1);
 
-        this.refreshErrorMessages();
+        // this.refreshErrorMessages();
         const dummyNotProvided = Date.now().toString(); // 'NOTPROVIDED';
         this.domEntryForm = this.fb.group({
           id: [entry.id],
@@ -237,7 +234,7 @@ export class DomEntryComponent implements OnInit {
 
     const dummyNotProvided = Date.now().toString(); // 'NOTPROVIDED';
     this.domEntryForm = this.fb.group({
-      id: Uuid(),
+      id: Guid(),
       endToEndReference: [dummyNotProvided, Validators.required],
       amount: [
         null,
@@ -258,6 +255,6 @@ export class DomEntryComponent implements OnInit {
     });
     this.domService.clearState();
     this.domJson = JSON.parse(localStorage.getItem('cddEntries_Template'));
-    this.refreshErrorMessages();
+    // this.refreshErrorMessages();
   }
 }
