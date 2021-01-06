@@ -29,7 +29,7 @@ import { DomSaveComponent } from './components/dom/domsave/domsave.component';
 import { DomLoadComponent } from './components/dom/domload/domload.component';
 import { DomToolsComponent } from './components/dom/domtools/domtools.component';
 
-import { SharedUiModule } from '@vsoft-nx/shared-ui';
+import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -65,7 +65,7 @@ export function createTranslateLoader(http: HttpClient) {
     BsDatepickerModule.forRoot(),
     ModalModule.forRoot(),
     FontAwesomeModule,
-    SharedUiModule
+    VsoftInterfacesModule
   ],
   providers: [DomService, LanguageService, BsModalRef],
   entryComponents: [

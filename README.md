@@ -8,9 +8,9 @@
 - application name: vsoft-nx, scss, ESLint
 - launch the test: `npx ng e2e vsoft-nx-e2e --watch` or use Nx Console (prefered)
 
-### shared-ui the first lib
+### vsoft-interfaces the first lib
 
-- `npx ng generate lib shared-ui` or use Nx Console (prefered)
+- `npx ng generate lib vsoft-interfaces` or use Nx Console (prefered)
 - generate the component: `npx ng generate component privacy --project=privacy`
 
 ### use the tools
@@ -18,9 +18,9 @@
 - `nx dep-graph` to have visual of your apps, libs and connections
 - `npm install cypress --save-dev` to install cypress
 - `npm install -D @nrwl/storybook` to add the storybook schematics (and use Nx Console to execute task storybook)
-- Step1: Use Nx Console (above) to generate storybook functionality for libs, example: shared-ui)
+- Step1: Use Nx Console (above) to generate storybook functionality for libs, example: vsoft-interfaces)
 - Step2: Use Nx Console (projects:below) to execute task storybook)
-- `npx nx run shared-ui-e2e:e2e --watch` for using storybook while working on your code (fails to work on my Windows 10)
+- `npx nx run vsoft-interfaces-e2e:e2e --watch` for using storybook while working on your code (fails to work on my Windows 10)
 
 https://youtu.be/tTR9OVMC0VE
 

@@ -9,4 +9,4 @@ import { TextInputComponent } from './text-input/text-input.component';
   declarations: [SliderComponent, TextInputComponent],
   exports: [SliderComponent, TextInputComponent],
 })
-export class SharedUiModule {}
+export class VsoftInterfacesModule {}

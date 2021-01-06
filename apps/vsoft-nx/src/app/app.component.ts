@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IbanCheck } from '@vsoft-nx/shared-ui';
+import { IbanCheck } from '@vsoft-nx/vsoft-interfaces';
 
 @Component({
   selector: 'vsoft-nx-root',

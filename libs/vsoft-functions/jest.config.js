@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'vsoft-ui',
+  displayName: 'vsoft-functions',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  coverageDirectory: '../../coverage/libs/vsoft-ui',
+  coverageDirectory: '../../coverage/libs/vsoft-functions',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

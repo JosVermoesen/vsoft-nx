@@ -16,8 +16,8 @@
       ],
       "parserOptions": {
         "project": [
-          "libs/shared-ui/tsconfig.*?.json",
-          "libs/shared-ui/.storybook/tsconfig.json"
+          "libs/vsoft-interfaces/tsconfig.*?.json",
+          "libs/vsoft-interfaces/.storybook/tsconfig.json"
         ]
       },
       "rules": {

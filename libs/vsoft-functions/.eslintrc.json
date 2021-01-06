@@ -16,8 +16,8 @@
       ],
       "parserOptions": {
         "project": [
-          "libs/vsoft-ui/tsconfig.*?.json",
-          "libs/vsoft-ui/.storybook/tsconfig.json"
+          "libs/vsoft-functions/tsconfig.*?.json",
+          "libs/vsoft-functions/.storybook/tsconfig.json"
         ]
       },
       "rules": {

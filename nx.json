@@ -36,19 +36,19 @@
       "tags": [],
       "implicitDependencies": ["vsoft-nx"]
     },
-    "shared-ui": {
+    "vsoft-interfaces": {
       "tags": []
     },
-    "vsoft-ui": {
+    "vsoft-functions": {
       "tags": []
     },
-    "shared-ui-e2e": {
+    "vsoft-interfaces-e2e": {
       "tags": [],
-      "implicitDependencies": ["shared-ui"]
+      "implicitDependencies": ["vsoft-interfaces"]
     },
-    "vsoft-ui-e2e": {
+    "vsoft-functions-e2e": {
       "tags": [],
-      "implicitDependencies": ["vsoft-ui"]
+      "implicitDependencies": ["vsoft-functions"]
     },
     "b-vsoft": {
       "tags": []

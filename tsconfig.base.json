@@ -18,11 +18,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@vsoft-nx/shared-ui": [
-        "libs/shared-ui/src/index.ts"
+      "@vsoft-nx/vsoft-interfaces": [
+        "libs/vsoft-interfaces/src/index.ts"
       ],
-      "@vsoft-nx/vsoft-ui": [
-        "libs/vsoft-ui/src/index.ts"
+      "@vsoft-nx/vsoft-functions": [
+        "libs/vsoft-functions/src/index.ts"
       ]
     }
   },

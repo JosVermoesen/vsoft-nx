@@ -121,28 +121,28 @@
         }
       }
     },
-    "shared-ui": {
+    "vsoft-interfaces": {
       "projectType": "library",
-      "root": "libs/shared-ui",
-      "sourceRoot": "libs/shared-ui/src",
+      "root": "libs/vsoft-interfaces",
+      "sourceRoot": "libs/vsoft-interfaces/src",
       "prefix": "vsoft-nx",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/shared-ui/src/**/*.ts",
-              "libs/shared-ui/src/**/*.html"
+              "libs/vsoft-interfaces/src/**/*.ts",
+              "libs/vsoft-interfaces/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/shared-ui"
+            "coverage/libs/vsoft-interfaces"
           ],
           "options": {
-            "jestConfig": "libs/shared-ui/jest.config.js",
+            "jestConfig": "libs/vsoft-interfaces/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -152,7 +152,7 @@
             "uiFramework": "@storybook/angular",
             "port": 4400,
             "config": {
-              "configFolder": "libs/shared-ui/.storybook"
+              "configFolder": "libs/vsoft-interfaces/.storybook"
             }
           },
           "configurations": {
@@ -165,9 +165,9 @@
           "builder": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/angular",
-            "outputPath": "dist/storybook/shared-ui",
+            "outputPath": "dist/storybook/vsoft-interfaces",
             "config": {
-              "configFolder": "libs/shared-ui/.storybook"
+              "configFolder": "libs/vsoft-interfaces/.storybook"
             }
           },
           "configurations": {
@@ -178,28 +178,28 @@
         }
       }
     },
-    "vsoft-ui": {
+    "vsoft-functions": {
       "projectType": "library",
-      "root": "libs/vsoft-ui",
-      "sourceRoot": "libs/vsoft-ui/src",
+      "root": "libs/vsoft-functions",
+      "sourceRoot": "libs/vsoft-functions/src",
       "prefix": "vsoft-nx",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/vsoft-ui/src/**/*.ts",
-              "libs/vsoft-ui/src/**/*.html"
+              "libs/vsoft-functions/src/**/*.ts",
+              "libs/vsoft-functions/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": [
-            "coverage/libs/vsoft-ui"
+            "coverage/libs/vsoft-functions"
           ],
           "options": {
-            "jestConfig": "libs/vsoft-ui/jest.config.js",
+            "jestConfig": "libs/vsoft-functions/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -209,7 +209,7 @@
             "uiFramework": "@storybook/angular",
             "port": 4400,
             "config": {
-              "configFolder": "libs/vsoft-ui/.storybook"
+              "configFolder": "libs/vsoft-functions/.storybook"
             }
           },
           "configurations": {
@@ -222,9 +222,9 @@
           "builder": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/angular",
-            "outputPath": "dist/storybook/vsoft-ui",
+            "outputPath": "dist/storybook/vsoft-functions",
             "config": {
-              "configFolder": "libs/vsoft-ui/.storybook"
+              "configFolder": "libs/vsoft-functions/.storybook"
             }
           },
           "configurations": {
@@ -235,21 +235,21 @@
         }
       }
     },
-    "shared-ui-e2e": {
-      "root": "apps/shared-ui-e2e",
-      "sourceRoot": "apps/shared-ui-e2e/src",
+    "vsoft-interfaces-e2e": {
+      "root": "apps/vsoft-interfaces-e2e",
+      "sourceRoot": "apps/vsoft-interfaces-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/shared-ui-e2e/cypress.json",
-            "tsConfig": "apps/shared-ui-e2e/tsconfig.e2e.json",
-            "devServerTarget": "shared-ui:storybook"
+            "cypressConfig": "apps/vsoft-interfaces-e2e/cypress.json",
+            "tsConfig": "apps/vsoft-interfaces-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vsoft-interfaces:storybook"
           },
           "configurations": {
             "ci": {
-              "devServerTarget": "shared-ui:storybook:ci"
+              "devServerTarget": "vsoft-interfaces:storybook:ci"
             }
           }
         },
@@ -257,27 +257,27 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/shared-ui-e2e/**/*.{js,ts}"
+              "apps/vsoft-interfaces-e2e/**/*.{js,ts}"
             ]
           }
         }
       }
     },
-    "vsoft-ui-e2e": {
-      "root": "apps/vsoft-ui-e2e",
-      "sourceRoot": "apps/vsoft-ui-e2e/src",
+    "vsoft-functions-e2e": {
+      "root": "apps/vsoft-functions-e2e",
+      "sourceRoot": "apps/vsoft-functions-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/vsoft-ui-e2e/cypress.json",
-            "tsConfig": "apps/vsoft-ui-e2e/tsconfig.e2e.json",
-            "devServerTarget": "vsoft-ui:storybook"
+            "cypressConfig": "apps/vsoft-functions-e2e/cypress.json",
+            "tsConfig": "apps/vsoft-functions-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vsoft-functions:storybook"
           },
           "configurations": {
             "ci": {
-              "devServerTarget": "vsoft-ui:storybook:ci"
+              "devServerTarget": "vsoft-functions:storybook:ci"
             }
           }
         },
@@ -285,7 +285,7 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/vsoft-ui-e2e/**/*.{js,ts}"
+              "apps/vsoft-functions-e2e/**/*.{js,ts}"
             ]
           }
         }

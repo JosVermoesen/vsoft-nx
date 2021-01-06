@@ -1,4 +1,4 @@
-import { Guid } from '@vsoft-nx/vsoft-ui';
+import { Guid } from '@vsoft-nx/vsoft-functions';
 
 export interface IBasket {
   id: string;

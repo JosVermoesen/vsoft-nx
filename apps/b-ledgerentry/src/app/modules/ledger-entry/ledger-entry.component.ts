@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as moment from 'moment';
 
 import { BasketService } from './services/basket.service';
-import { Guid } from '@vsoft-nx/vsoft-ui';
+import { Guid } from '@vsoft-nx/vsoft-functions';
 import { Observable } from 'rxjs';
 import { IBasket, IBasketItem, IBasketSolde } from './models/basket';
 

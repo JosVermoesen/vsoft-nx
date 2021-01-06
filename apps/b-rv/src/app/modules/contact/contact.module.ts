@@ -17,9 +17,8 @@ import { ContactComponent } from './contact.component';
 import { ModalOfficeInfoComponent } from './modal-officeinfo/modal-office-info.component';
 
 import { SharedModule } from '../../shared/shared.module';
+import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
 // import { CountdownModule, CountdownGlobalConfig } from 'ngx-countdown';
-
-import { SharedUiModule } from '@vsoft-nx/shared-ui';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,7 @@ import { SharedUiModule } from '@vsoft-nx/shared-ui';
     AlertModule.forRoot(),
     ReactiveFormsModule,
     SharedModule,
-    SharedUiModule
+    VsoftInterfacesModule
     // CountdownModule
   ],
   providers: []

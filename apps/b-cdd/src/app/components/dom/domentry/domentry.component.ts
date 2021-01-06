@@ -10,7 +10,7 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 import * as moment from 'moment';
 
-import { Guid, IbanCheck} from '@vsoft-nx/vsoft-ui';
+import { Guid, IbanCheck} from '@vsoft-nx/vsoft-functions';
 
 import { DomService } from '../../../_services/dom.service';
 import { DomEntry } from '../../../_models/domEntry';

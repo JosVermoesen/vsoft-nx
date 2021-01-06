@@ -13,8 +13,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { GadgetsRoutingModule } from './gadgets-routing.module';
 import { GadgetsComponent } from './gadgets.component';
-
-import { SharedUiModule } from '@vsoft-nx/shared-ui';
+import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
 
 @NgModule({
   declarations: [GadgetsComponent],
@@ -30,7 +29,7 @@ import { SharedUiModule } from '@vsoft-nx/shared-ui';
     }),
     AlertModule.forRoot(),
     ReactiveFormsModule,
-    SharedUiModule
+    VsoftInterfacesModule
   ],
 })
 export class GadgetsModule {}
