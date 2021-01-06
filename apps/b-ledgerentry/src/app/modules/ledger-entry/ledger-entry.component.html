@@ -41,7 +41,7 @@
             <input type="submit" class="btn btn-primary mr-1" value="{{btnAddOrEdit}}"
               [disabled]="!ledgerEntryForm.valid">
             <button type="button" class="btn btn-warning mr-1" (click)="clearState()">Ignore</button>
-            <!-- <button type="button" class="btn btn-danger" (click)="clearEntry()">Remove All</button> -->
+            <button type="button" class="btn btn-danger" (click)="removeAllEntries()">Remove All</button>
           </form>
         </div>
 
@@ -65,7 +65,7 @@
               <div [ngStyle]="{'color':getColor(item.dcOption)}">
                 <span>{{ item.amount | currency:'EUR' }}</span>
               </div>
-              <button type="button" class="close" aria-label="Close" (click)="onDelete(item)">
+              <button type="button" class="close" aria-label="Close" (click)="removeSingleEntry(item)">
                 <span aria-hidden="true">&times;</span>
               </button>
             </li>

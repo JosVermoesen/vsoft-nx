@@ -39,16 +39,16 @@
     "shared-ui": {
       "tags": []
     },
-    "privacy-ui": {
+    "vsoft-ui": {
       "tags": []
     },
     "shared-ui-e2e": {
       "tags": [],
       "implicitDependencies": ["shared-ui"]
     },
-    "privacy-ui-e2e": {
+    "vsoft-ui-e2e": {
       "tags": [],
-      "implicitDependencies": ["privacy-ui"]
+      "implicitDependencies": ["vsoft-ui"]
     },
     "b-vsoft": {
       "tags": []

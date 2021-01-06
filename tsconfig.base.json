@@ -21,8 +21,8 @@
       "@vsoft-nx/shared-ui": [
         "libs/shared-ui/src/index.ts"
       ],
-      "@vsoft-nx/privacy-ui": [
-        "libs/privacy-ui/src/index.ts"
+      "@vsoft-nx/vsoft-ui": [
+        "libs/vsoft-ui/src/index.ts"
       ]
     }
   },

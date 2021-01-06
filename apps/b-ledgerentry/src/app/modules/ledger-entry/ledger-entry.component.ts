@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import * as moment from 'moment';
 
 import { BasketService } from './services/basket.service';
-import { Guid } from '@vsoft-nx/shared-ui';
+import { Guid } from '@vsoft-nx/vsoft-ui';
 import { Observable } from 'rxjs';
 import { IBasket, IBasketItem, IBasketSolde } from './models/basket';
 
@@ -130,8 +130,8 @@ export class LedgerEntryComponent implements OnInit {
     this.btnAddOrEdit = 'Save';
   }
 
-  onDelete(item: IBasketItem) {
-    // console.log(item);
+  removeSingleEntry(item: IBasketItem) {
+    console.log(item);
     if (confirm('Are you sure?')) {
       this.loaded = false;
       this.basketService.removeItemFromBasket(item);
@@ -152,5 +152,10 @@ export class LedgerEntryComponent implements OnInit {
     }
   }
 
-  // clearEntry() { }
+  removeAllEntries() {
+    if (confirm('Are you sure?')) {
+      this.basketService.removeAllItemsFromBasket();
+      this.refreshBasket();
+    }
+   }
 }

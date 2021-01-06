@@ -162,6 +162,11 @@ export class BasketService {
     }
   }
 
+  removeAllItemsFromBasket() {
+    const basket = this.getCurrentBasketValue();
+    this.deleteBasket(basket);
+  }
+
   deleteBasket(basket: IBasket) {
     // LOCALSTORE !!
     return this.http
