@@ -1,4 +1,4 @@
-// please rename environment.prod$.ts to environment.prod.ts
+// please rename environment.prod$.ts to environment.prod.ts and add your apiKeys
 export const environment = {
   production: true,
 

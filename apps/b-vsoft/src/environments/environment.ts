@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  version: '0.0.0',
+  version: '0.1.1',
 
   // add your api keys to use contactmail with our server
   apiVsoftMailGuid: 'place your key here!',
