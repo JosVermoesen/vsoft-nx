@@ -3,7 +3,9 @@
     "BoxLabel1": "Beter",
     "BoxLabel2": "Slimmer",
     "BoxLabel3": "Sneller",
-    "BoxLabel4": "Sterker"
+    "BoxLabel4": "Sterker",
+    "IsRequired": "is verplicht",
+    "InvalidEmail": "Ongeldig email adres"
   },
 
   "MARINTEGRAAL": {

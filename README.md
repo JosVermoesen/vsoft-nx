@@ -16,11 +16,9 @@
 ### use the tools
 
 - `nx dep-graph` to have visual of your apps, libs and connections
-- `npm install cypress --save-dev` to install cypress
 - `npm install -D @nrwl/storybook` to add the storybook schematics (and use Nx Console to execute task storybook)
-- Step1: Use Nx Console (above) to generate storybook functionality for libs, example: vsoft-interfaces)
-- Step2: Use Nx Console (projects:below) to execute task storybook)
-- `npx nx run vsoft-interfaces-e2e:e2e --watch` for using storybook while working on your code (fails to work on my Windows 10)
+- Step1: Use Nx Console (above) to generate storybook functionality for libs, example: vsoft-interfaces
+- Step2: Use Nx Console (projects:below) to execute task storybook
 
 https://youtu.be/tTR9OVMC0VE
 

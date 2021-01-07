@@ -15,6 +15,8 @@ import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { OfficeInfoModalComponent } from './officeinfo-modal/office-info-modal.component';
 
+import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
+
 @NgModule({
   declarations: [ContactComponent, OfficeInfoModalComponent],
   imports: [
@@ -29,6 +31,7 @@ import { OfficeInfoModalComponent } from './officeinfo-modal/office-info-modal.c
     }),
     AlertModule.forRoot(),
     ReactiveFormsModule,
+    VsoftInterfacesModule
   ],
 })
 export class ContactModule {}

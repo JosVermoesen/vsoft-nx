@@ -27,28 +27,31 @@
                             <form [formGroup]="form" (ngSubmit)="submitContactMail()">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" formControlName="name" class="form-control"
-                                                placeholder="{{ 'CONTACT.MessageNameLabel' | translate }}">
-                                        </div>
+                                      <vsoft-nx-text-input
+                                        formControlName="name"
+                                        label="{{ 'CONTACT.MessageNameLabel' | translate }}"
+                                        warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+                                      ></vsoft-nx-text-input>
+                                      </div>
+                                    <div class="col-md-6">
+                                      <vsoft-nx-text-input
+                                        formControlName="rR"
+                                        label="{{ 'CONTACT.MessageRRLabel' | translate }}"
+                                        warningMessage="{{ 'COMMON.IsRequired' | translate }}"
+                                      ></vsoft-nx-text-input>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" formControlName="rR" class="form-control"
-                                                placeholder="{{ 'CONTACT.MessageRRLabel' | translate }}">
-                                        </div>
+                                      <vsoft-nx-text-input
+                                        formControlName="email"
+                                        label="{{ 'CONTACT.MessageMailLabel' | translate }}"
+                                        warningMessage="{{ 'COMMON.InvalidEmail' | translate }}"
+                                      ></vsoft-nx-text-input>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" formControlName="email" class="form-control"
-                                                placeholder="{{ 'CONTACT.MessageMailLabel' | translate }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" formControlName="phone" class="form-control"
-                                                placeholder="{{ 'CONTACT.MessagePhoneLabel' | translate }}">
-                                        </div>
+                                      <vsoft-nx-text-input
+                                        formControlName="phone"
+                                        label="{{ 'CONTACT.MessagePhoneLabel' | translate }}"
+                                      ></vsoft-nx-text-input>
                                     </div>
                                 </div>
 
@@ -120,6 +123,6 @@
                 <h4>Jos Vermoesen</h4>
                 <small>josvermoesen@rv.be</small>
             </div>
-        </div>        
+        </div>
     </div>
 </section> -->
