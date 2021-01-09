@@ -1,0 +1,155 @@
+{
+  "def003-all": [
+    {
+      "actionCode": "O   v019 -",
+      "description": "Unique Account number M.A.R.",
+      "fieldNameDB": "id",
+      "fieldType": "S",
+      "fieldMin": 2,
+      "fieldMax": 7,
+      "required": true,
+      "canEdit": false
+    },
+
+    {
+      "actionCode": "2   v020",
+      "description": "Account description",
+      "fieldNameDB": "v020",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 40,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "2   v021",
+      "description": "Disassemble key",
+      "fieldNameDB": "v021",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "020 v032",
+      "description": "Budget Flag",
+      "fieldNameDB": "v032",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "    v216",
+      "description": "Forfait cumulator",
+      "fieldNameDB": "v216",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 2,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "3   dece022 -",
+      "description": "EUR highest bookyear",
+      "fieldNameDB": "dece022",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece023 -",
+      "description": "EUR bookyear -1",
+      "fieldNameDB": "dece023",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece024",
+      "description": "EUR bookyear -2",
+      "fieldNameDB": "dece024",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece025",
+      "description": "EUR bookyear -3",
+      "fieldNameDB": "dece025",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece026",
+      "description": "EUR bookyear -4",
+      "fieldNameDB": "dece026",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece027",
+      "description": "EUR bookyear -5",
+      "fieldNameDB": "dece027",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece028",
+      "description": "EUR bookyear -6",
+      "fieldNameDB": "dece028",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece029",
+      "description": "EUR bookyear -7",
+      "fieldNameDB": "dece029",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece030",
+      "description": "EUR bookyear -8",
+      "fieldNameDB": "dece030",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    },
+    {
+      "actionCode": "3   dece031",
+      "description": "EUR bookyear -9",
+      "fieldNameDB": "dece031",
+      "fieldType": "D",
+      "fieldMin": -99999999,
+      "fieldMax": 99999999,
+      "required": false,
+      "canEdit": false
+    }
+  ]
+}

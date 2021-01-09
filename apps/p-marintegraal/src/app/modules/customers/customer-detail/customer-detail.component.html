@@ -1,0 +1,12 @@
+<p-tabView (onChange)="handleChange($event)">
+  <p-tabPanel leftIcon="pi pi-step-backward">
+    <i class="pi pi-spin pi-spinner" style="font-size: 3em"></i>
+  </p-tabPanel>
+
+  <p-tabPanel header="{{ 'CUSTOMERS.detailsTab1' | translate }}" [selected]="true">
+    <vsoft-nx-customer-invoices></vsoft-nx-customer-invoices>
+  </p-tabPanel>
+  <p-tabPanel header="{{ 'CUSTOMERS.detailsTab2' | translate }}">
+    <vsoft-nx-customer-contracts></vsoft-nx-customer-contracts>
+  </p-tabPanel>
+</p-tabView>

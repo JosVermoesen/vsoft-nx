@@ -1,0 +1,11 @@
+<p-card>
+    <p-footer>
+        <button type="button" pButton icon="pi pi-file-pdf" iconPos="left" label="PDF" (click)="testPdf()" class="p-button-warning"></button>
+        <ngx-qrcode
+          [elementType]="qrElementType"
+          [value]="qrValue"
+          cssClass="aclass"
+          errorCorrectionLevel="L">
+        </ngx-qrcode>
+    </p-footer>
+</p-card>

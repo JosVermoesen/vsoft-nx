@@ -1,0 +1,10 @@
+<div *ngIf="!loggedIn()">
+  <p-menubar [(model)]="itemsLoggedOut">
+    <i (click)="onLanguageModal()" class="pi pi-ellipsis-v" style="font-size: 1em"></i>
+  </p-menubar>
+</div>
+<div *ngIf="loggedIn()">
+  <p-menubar [(model)]="itemsLoggedIn">
+    <i (click)="onLanguageModal()" class="pi pi-ellipsis-v" style="font-size: 1em"></i>
+  </p-menubar>
+</div>

@@ -77,6 +77,13 @@
     "b-ledgerentry-e2e": {
       "tags": [],
       "implicitDependencies": ["b-ledgerentry"]
+    },
+    "p-marintegraal": {
+      "tags": []
+    },
+    "p-marintegraal-e2e": {
+      "tags": [],
+      "implicitDependencies": ["p-marintegraal"]
     }
   }
 }

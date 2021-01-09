@@ -1,0 +1,1312 @@
+{
+  "COMMON": {
+    "btnClose": "Sluiten",
+    "btnAdd": "Toevoegen",
+    "btnSubmit": "Verzenden",
+    "btnSave": "Bewaren",
+    "btnOk": "Ok",
+    "btnIgnore": "Terug",
+    "btnCancel": "Annuleren",
+    "alertAddSuccess": "Toegevoegd met success",
+    "alertEditSuccess": "Gewijzigd met success",
+    "alertNoChanges": "Mogelijk bent U onbevoegd om data te bewaren",
+    "alertAddEditFailure": "Bewaren is mislukt!"
+  },
+  "MODALPRIME": {
+    "fieldRequired": "verplicht veld",
+    "fieldNotRequired": ""
+  },
+  "NAVBAR": {
+    "programTitle": "marIntegraal (NL)",
+    "loginLabel": "Inloggen",
+    "languageModalTitle": "Kies uw taal:"
+  },
+  "WELCOME": {
+    "title": "Welkom!",
+    "label": "marIntegraal voor Linux, Windows en Mac!",
+    "subLabel": "Log in om de toepassing te gebruiken"
+  },
+  "EXIT": {
+    "title": "Exit Toepassing!",
+    "message": "Bedankt om marIntegraal te gebruiken.",
+    "btnLearnMore": "Meer info"
+  },
+  "ZMENU": {
+    "title": "Hallo, ",
+    "message": "U hebt toegang tot volgende functies"
+  },
+  "LOGIN": {
+    "failed": "Ongeldige combinatie! Probeer opnieuw",
+    "success": "Login met succes",
+    "userName": "Gebruikersnaam",
+    "userNameHint": "Geef gebruikersnaam",
+    "userNameRequired": "Gebruikersnaam is verplicht",
+    "passWord": "Paswoord",
+    "passWordHint": "Breng passwoord in",
+    "passWordRequired": "Paswoord is verplicht"
+  },
+  "CUSTOMERS": {
+    "idInvoice": "Factuur Id",
+    "a000Label": "Contract",
+    "v035Label": "Datum",
+    "v249Label": "€ Bedrag",
+    "v223Label": "Type verzekering",
+    "a010Label": "Code leverancier",
+    "idContract": "Contract",
+    "vs99Label": "Info",
+    "vs98Label": "Info vervolg",
+    "detailsTab1": "Facturen",
+    "detailsTab2": "Contracten",
+    "editTab1": "Klant bewerken",
+    "editTab2": "Instellen",
+    "choosenLabel": "Geselecteerde velden",
+    "availableLabel": "Beschikbare velden",
+    "idLabel": "Code klant",
+    "a100Label": "Naam",
+    "a107Label": "Postcode",
+    "a104Label": "Plaats",
+    "v301Label": "Rijksregister",
+    "title": "Klanten",
+    "newLabel": "Nieuwe klant",
+    "listRole": "Een rol om lijst klanten te raadplegen ontbreekt in uw gebruikersprofiel",
+    "detailsRole": "Een rol om detail van een klant te raadplegen ontbreekt in uw gebruikersprofiel",
+    "editRole": "Een rol om een klant te wijzigen of raadplegen ontbreekt in uw gebruikersprofiel"
+  },
+  "SUPPLIERS": {
+    "idInvoice": "Factuur Id",
+    "v035Label": "Datum",
+    "v249Label": "€ Bedrag",
+    "detailsTab1": "Facturen",
+    "editTab1": "Leverancier bewerken",
+    "editTab2": "Instellen",
+    "choosenLabel": "Geselecteerde velden",
+    "availableLabel": "Beschikbare velden",
+    "idLabel": "Code leverancier",
+    "a100Label": "Naam",
+    "a107Label": "Postcode",
+    "a104Label": "Plaats",
+    "a161Label": "BTW nummer",
+    "title": "Leveranciers",
+    "newLabel": "Nieuwe leverancier",
+    "listRole": "Een rol om lijst leveranciers te raadplegen ontbreekt in uw gebruikersprofiel",
+    "detailsRole": "Een rol om detail van een leverancier te raadplegen ontbreekt in uw gebruikersprofiel",
+    "editRole": "Een rol om een leverancier te wijzigen of raadplegen ontbreekt in uw gebruikersprofiel"
+  },
+  "ACCOUNTS": {
+    "v067Label": "Boeking omschrijving",
+    "v035Label": "Datum",
+    "v033Label": "Document",
+    "dece068Label": "€ Bedrag",
+    "v069Label": "Tegenrekening",
+    "detailsTab1": "Journalen",
+    "editTab1": "Rekening bewerken",
+    "editTab2": "Instellen",
+    "choosenLabel": "Geselecteerde velden",
+    "availableLabel": "Beschikbare velden",
+    "idLabel": "Rekening nummer",
+    "v020Label": "Omschrijving",
+    "dece022Label": "€ Saldo Boekjaar",
+    "dece023Label": "€ Saldo Boekjaar-1",
+    "title": "Rekeningen",
+    "newLabel": "Nieuwe rekening",
+    "listRole": "Een rol om lijst rekeningen te raadplegen ontbreekt in uw gebruikersprofiel",
+    "detailsRole": "Een rol om detail van een rekening te raadplegen ontbreekt in uw gebruikersprofiel",
+    "editRole": "Een rol om een rekening te wijzigen of raadplegen ontbreekt in uw gebruikersprofiel"
+  },
+  "marDef": {
+    "DEF001": [
+      {
+        "actionCode": "todo",
+        "description": "Klantnummer",
+        "fieldNameDB": "id",
+        "fieldType": "S",
+        "fieldMin": 1,
+        "fieldMax": 12,
+        "required": true,
+        "canEdit": false
+      },
+      {
+        "actionCode": "todo",
+        "description": "Taal code",
+        "fieldNameDB": "a10c",
+        "fieldType": "S",
+        "fieldMin": 1,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Postcode",
+        "fieldNameDB": "a107",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 7,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Plaats",
+        "fieldNameDB": "a108",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 24,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Straat",
+        "fieldNameDB": "a104",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 30,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Huisnummer",
+        "fieldNameDB": "a105",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 5,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Busnummer",
+        "fieldNameDB": "a106",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 4,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Land code (bPost)",
+        "fieldNameDB": "a109",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 3,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "BTW nummer (BE formaat)",
+        "fieldNameDB": "a161",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 15,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "v151",
+        "fieldNameDB": "Medecontractant? (1=ja)",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Standaard BTW code",
+        "fieldNameDB": "v111",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "cloudlink (mijnDocumenten)",
+        "fieldNameDB": "v254",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 150,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Betaaltermijn",
+        "fieldNameDB": "vs04",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 4,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Laatst bezocht/contact",
+        "fieldNameDB": "v227",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Server guid (mijnDocumenten)",
+        "fieldNameDB": "v247",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 150,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Telefoon (vaste lijn)",
+        "fieldNameDB": "a10a",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 20,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Fax",
+        "fieldNameDB": "vs02",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 12,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Burgerlijke stand",
+        "fieldNameDB": "a123",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Geslacht (3= rechtspersoon)",
+        "fieldNameDB": "a124",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Nationaliteit",
+        "fieldNameDB": "a121",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 3,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Rijksregister 1",
+        "fieldNameDB": "v301",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 11,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Aanspreking",
+        "fieldNameDB": "a102",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Familienaam",
+        "fieldNameDB": "a100",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 35,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Voornaam",
+        "fieldNameDB": "a101",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 15,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Mobiel (main?)",
+        "fieldNameDB": "v226",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 16,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Email 1",
+        "fieldNameDB": "v224",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 60,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Telefoon (werk)",
+        "fieldNameDB": "v243",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "IBAN bankrekening",
+        "fieldNameDB": "v259",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "BIC bankrekening",
+        "fieldNameDB": "v260",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Bankrekening (BE oud formaat)",
+        "fieldNameDB": "a170",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 14,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Rijksregister (partner)",
+        "fieldNameDB": "v302",
+        "fieldType": "S",
+        "fieldMin": 11,
+        "fieldMax": 11,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Aanspreking (partner)",
+        "fieldNameDB": "vs01",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Familienaam (partner)",
+        "fieldNameDB": "a125",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 35,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Voornaam (partner)",
+        "fieldNameDB": "a127",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 15,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Mobiel (partner)",
+        "fieldNameDB": "v244",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Email (partner)",
+        "fieldNameDB": "v002",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 60,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "IBAN bankrekening (partner)",
+        "fieldNameDB": "v257",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "BIC bankrekening (partner)",
+        "fieldNameDB": "v258",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Bankrekening oud formaat (partner)",
+        "fieldNameDB": "v251",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      }
+    ],
+    "DEF002": [
+      {
+        "actionCode": "todo",
+        "description": "Leverancier Code",
+        "fieldNameDB": "id",
+        "fieldType": "S",
+        "fieldMin": 1,
+        "fieldMax": 12,
+        "required": true,
+        "canEdit": false
+      },
+      {
+        "actionCode": "todo",
+        "description": "Title code",
+        "fieldNameDB": "a102",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Last name",
+        "fieldNameDB": "a100",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 35,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Title code (partner)",
+        "fieldNameDB": "vs01",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Last name (partner)",
+        "fieldNameDB": "a125",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 35,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Language code",
+        "fieldNameDB": "a10c",
+        "fieldType": "S",
+        "fieldMin": 1,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Street",
+        "fieldNameDB": "a104",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 30,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Number",
+        "fieldNameDB": "a105",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 5,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Box",
+        "fieldNameDB": "a106",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 4,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Postal code",
+        "fieldNameDB": "a107",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 7,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "City",
+        "fieldNameDB": "a108",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 24,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "ISO Country number",
+        "fieldNameDB": "v149",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 3,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Country code (Belgian bPost)",
+        "fieldNameDB": "a109",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 3,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "ISO Country code",
+        "fieldNameDB": "v150",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 2,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "ISO Currency code (EUR)",
+        "fieldNameDB": "vs03",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 3,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Phone number (fixed line)",
+        "fieldNameDB": "a10a",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 20,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Fax number",
+        "fieldNameDB": "vs02",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 12,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Email",
+        "fieldNameDB": "v224",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 60,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "connection stock",
+        "fieldNameDB": "v163",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 7,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "connection 6-account",
+        "fieldNameDB": "v016",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 7,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "connection 44-account",
+        "fieldNameDB": "v161",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 7,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "VAT number",
+        "fieldNameDB": "a161",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 15,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "BE banc account old format",
+        "fieldNameDB": "a170",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 14,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Banc accountIBAN",
+        "fieldNameDB": "v259",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Banc account BIC",
+        "fieldNameDB": "v260",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Fixed ref./agent number",
+        "fieldNameDB": "a400",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 10,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Registration number",
+        "fieldNameDB": "v015",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 10,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Medecontractant ",
+        "fieldNameDB": "v151",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Default VAT code",
+        "fieldNameDB": "v111",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Payment delay",
+        "fieldNameDB": "vs04",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 4,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "aardcode struct.mededeling",
+        "fieldNameDB": "v017",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Streefomzet",
+        "fieldNameDB": "v018",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 9,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Picture",
+        "fieldNameDB": "v001",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 30,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Video file",
+        "fieldNameDB": "v002",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 30,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Mobile Phone",
+        "fieldNameDB": "v226",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Date last visit",
+        "fieldNameDB": "v227",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Opmerkingen",
+        "fieldNameDB": "v247",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "SQL Aankoopverrichting",
+        "fieldNameDB": "v254",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "Streefomzet",
+        "fieldNameDB": "decv018",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 9999999,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "??",
+        "fieldNameDB": "v255",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "??",
+        "fieldNameDB": "v256",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "todo",
+        "description": "??",
+        "fieldNameDB": "v262",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      }
+    ],
+    "DEF003": [
+      {
+        "actionCode": "O   v019 -",
+        "description": "Uniek Rekeningnummer M.A.R.",
+        "fieldNameDB": "id",
+        "fieldType": "S",
+        "fieldMin": 2,
+        "fieldMax": 7,
+        "required": true,
+        "canEdit": false
+      },
+      {
+        "actionCode": "2   v020",
+        "description": "Naam Rekening",
+        "fieldNameDB": "v020",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 40,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "2   v021",
+        "description": "Verdeelsleutel",
+        "fieldNameDB": "v021",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 50,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "020 v032",
+        "description": "Budgetteringsvlag",
+        "fieldNameDB": "v032",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 1,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "    v216",
+        "description": "Forfaitaire cumulator",
+        "fieldNameDB": "v216",
+        "fieldType": "S",
+        "fieldMin": 0,
+        "fieldMax": 2,
+        "required": false,
+        "canEdit": true
+      },
+      {
+        "actionCode": "3   dece022 -",
+        "description": "EUR hoogste boekjaar",
+        "fieldNameDB": "dece022",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece023 -",
+        "description": "EUR boekjaar -1",
+        "fieldNameDB": "dece023",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece024",
+        "description": "EUR boekjaar -2",
+        "fieldNameDB": "dece024",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece025",
+        "description": "EUR boekjaar -3",
+        "fieldNameDB": "dece025",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece026",
+        "description": "EUR boekjaar -4",
+        "fieldNameDB": "dece026",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece027",
+        "description": "EUR boekjaar -5",
+        "fieldNameDB": "dece027",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece028",
+        "description": "EUR boekjaar -6",
+        "fieldNameDB": "dece028",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece029",
+        "description": "EUR boekjaar -7",
+        "fieldNameDB": "dece029",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece030",
+        "description": "EUR boekjaar -8",
+        "fieldNameDB": "dece030",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      },
+      {
+        "actionCode": "3   dece031",
+        "description": "EUR boekjaar -9",
+        "fieldNameDB": "dece031",
+        "fieldType": "D",
+        "fieldMin": -99999999,
+        "fieldMax": 99999999,
+        "required": false,
+        "canEdit": false
+      }
+    ]
+  },
+  "selectOptions": {
+    "A102": [
+      {
+        "value": "0",
+        "viewvalue": "0:"
+      },
+      {
+        "value": "1",
+        "viewValue": "1: Dhr."
+      },
+      {
+        "value": "2",
+        "viewValue": "2: Mw."
+      },
+      {
+        "value": "3",
+        "viewValue": "3: Mej."
+      },
+      {
+        "value": "4",
+        "viewValue": "4: Dhrn."
+      },
+      {
+        "value": "5",
+        "viewValue": "5: Mr&Mw"
+      },
+      {
+        "value": "6",
+        "viewValue": "6: Firma"
+      },
+      {
+        "value": "7",
+        "viewValue": "7: C.V."
+      },
+      {
+        "value": "8",
+        "viewValue": "8: Bvba"
+      },
+      {
+        "value": "9",
+        "viewValue": "9: N.V."
+      }
+    ],
+    "A10C": [
+      {
+        "value": "0",
+        "viewvalue": "0:"
+      },
+      {
+        "value": "1",
+        "viewValue": "1: Frans"
+      },
+      {
+        "value": "2",
+        "viewValue": "2: Nederlands"
+      },
+      {
+        "value": "3",
+        "viewValue": "3: Duits"
+      },
+      {
+        "value": "4",
+        "viewValue": "4: Engels"
+      },
+      {
+        "value": "9",
+        "viewValue": "9: Andere"
+      }
+    ]
+  },
+  "MENUS": {
+    "MAINLOGGEDIN": [
+      {
+        "label": "Fiches",
+        "items": [
+          {
+            "label": "Klanten",
+            "routerLink": [
+              "/customers/list"
+            ]
+          },
+          {
+            "label": "Leveranciers",
+            "routerLink": [
+              "/suppliers/list"
+            ]
+          },
+          {
+            "label": "Rekeningen",
+            "routerLink": [
+              "/ledgeraccounts/list"
+            ]
+          },
+          {
+            "label": "Uitloggen",
+            "routerLink": [
+              "/exit"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Z",
+        "items": [
+          {
+            "label": "Hoofdmenu",
+            "routerLink": [
+              "/z/menu"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Admin",
+        "items": [
+          {
+            "label": "Admin",
+            "routerLink": [
+              "/admin"
+            ]
+          }
+        ]
+      }
+    ],
+    "mainDemo": [
+      {
+        "label": "File",
+        "icon": "pi pi-fw pi-file",
+        "items": [
+          {
+            "label": "New",
+            "icon": "pi pi-fw pi-plus",
+            "items": [
+              {
+                "label": "Project"
+              },
+              {
+                "label": "Other"
+              }
+            ]
+          },
+          {
+            "label": "Open"
+          },
+          {
+            "separator": true
+          },
+          {
+            "label": "Quit"
+          }
+        ]
+      },
+      {
+        "label": "Edit",
+        "icon": "pi pi-fw pi-pencil",
+        "items": [
+          {
+            "label": "Delete",
+            "icon": "pi pi-fw pi-trash"
+          },
+          {
+            "label": "Refresh",
+            "icon": "pi pi-fw pi-refresh"
+          }
+        ]
+      },
+      {
+        "label": "Help",
+        "icon": "pi pi-fw pi-question",
+        "items": [
+          {
+            "label": "Contents"
+          },
+          {
+            "label": "Search",
+            "icon": "pi pi-fw pi-search",
+            "items": [
+              {
+                "label": "Text",
+                "items": [
+                  {
+                    "label": "Workspace"
+                  }
+                ]
+              },
+              {
+                "label": "File"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Actions",
+        "icon": "pi pi-fw pi-cog",
+        "items": [
+          {
+            "label": "Edit",
+            "icon": "pi pi-fw pi-pencil",
+            "items": [
+              {
+                "label": "Save",
+                "icon": "pi pi-fw pi-save"
+              },
+              {
+                "label": "Update",
+                "icon": "pi pi-fw pi-save"
+              }
+            ]
+          },
+          {
+            "label": "Other",
+            "icon": "pi pi-fw pi-tags",
+            "items": [
+              {
+                "label": "Delete",
+                "icon": "pi pi-fw pi-minus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Quit",
+        "icon": "pi pi-fw pi-times"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+<p-card>
+  <form [formGroup]="loginForm">
+    <br>
+    <div class="form-group">
+      <span class="p-float-label">
+        <input formControlName="username" id="float-username" type="text" size="36" pInputText>
+        <label for="float-username">{{ 'LOGIN.userName' | translate }}</label>
+      </span>
+    </div>
+    <br>
+    <div class="form-group">
+      <span class="p-float-label">
+        <input formControlName="password" id="float-password" type="password" size="36" pInputText>
+        <label for="float-password">{{ 'LOGIN.passWord' | translate }}</label>
+      </span>
+    </div>
+  </form>
+
+  <p-footer>
+    <div *ngIf="primeSpinner">
+      <i class="pi pi-spin pi-spinner" style="font-size: 3em"></i>
+    </div>
+    <div *ngIf="!primeSpinner">
+      <button pButton type="button" label="{{ 'COMMON.btnSubmit' | translate }}" (click)="login()"
+        [disabled]="loginForm.invalid" class="p-button-raised p-button-info" style="margin-right: .25em"></button>
+      <button pButton type="button" (click)="onCanceled()" icon="pi pi-step-backward" iconPos="right"
+        label="{{ 'COMMON.btnIgnore' | translate }}" class="p-button-secondary"></button>
+    </div>
+  </p-footer>
+</p-card>

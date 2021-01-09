@@ -20,9 +20,7 @@
               "apps/vsoft-nx/src/favicon.ico",
               "apps/vsoft-nx/src/assets"
             ],
-            "styles": [
-              "apps/vsoft-nx/src/styles.scss"
-            ],
+            "styles": ["apps/vsoft-nx/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -83,9 +81,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/vsoft-nx"
-          ],
+          "outputs": ["coverage/apps/vsoft-nx"],
           "options": {
             "jestConfig": "apps/vsoft-nx/jest.config.js",
             "passWithNoTests": true
@@ -114,9 +110,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/vsoft-nx-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/vsoft-nx-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -138,9 +132,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/vsoft-interfaces"
-          ],
+          "outputs": ["coverage/libs/vsoft-interfaces"],
           "options": {
             "jestConfig": "libs/vsoft-interfaces/jest.config.js",
             "passWithNoTests": true
@@ -195,9 +187,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/vsoft-functions"
-          ],
+          "outputs": ["coverage/libs/vsoft-functions"],
           "options": {
             "jestConfig": "libs/vsoft-functions/jest.config.js",
             "passWithNoTests": true
@@ -256,9 +246,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/vsoft-interfaces-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/vsoft-interfaces-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -284,9 +272,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/vsoft-functions-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/vsoft-functions-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -300,11 +286,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "lodash",
-              "axios",
-              "qs"
-            ],
+            "allowedCommonJsDependencies": ["lodash", "axios", "qs"],
             "outputPath": "dist/apps/b-vsoft",
             "index": "apps/b-vsoft/src/index.html",
             "main": "apps/b-vsoft/src/main.ts",
@@ -317,9 +299,7 @@
               "apps/b-vsoft/src/BingSiteAuth.xml",
               "apps/b-vsoft/src/sitemap.xml"
             ],
-            "styles": [
-              "apps/b-vsoft/src/styles.scss"
-            ],
+            "styles": ["apps/b-vsoft/src/styles.scss"],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -383,9 +363,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/b-vsoft"
-          ],
+          "outputs": ["coverage/apps/b-vsoft"],
           "options": {
             "jestConfig": "apps/b-vsoft/jest.config.js",
             "passWithNoTests": true
@@ -414,9 +392,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/b-vsoft-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/b-vsoft-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -430,22 +406,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "file-saver"
-            ],
+            "allowedCommonJsDependencies": ["file-saver"],
             "outputPath": "dist/apps/b-cdd",
             "index": "apps/b-cdd/src/index.html",
             "main": "apps/b-cdd/src/main.ts",
             "polyfills": "apps/b-cdd/src/polyfills.ts",
             "tsConfig": "apps/b-cdd/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/b-cdd/src/favicon.ico",
-              "apps/b-cdd/src/assets"
-            ],
-            "styles": [
-              "apps/b-cdd/src/styles.scss"
-            ],
+            "assets": ["apps/b-cdd/src/favicon.ico", "apps/b-cdd/src/assets"],
+            "styles": ["apps/b-cdd/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -506,9 +475,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/b-cdd"
-          ],
+          "outputs": ["coverage/apps/b-cdd"],
           "options": {
             "jestConfig": "apps/b-cdd/jest.config.js",
             "passWithNoTests": true
@@ -537,9 +504,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/b-cdd-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/b-cdd-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -553,11 +518,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "lodash",
-              "axios",
-              "qs"
-            ],
+            "allowedCommonJsDependencies": ["lodash", "axios", "qs"],
             "outputPath": "dist/apps/b-rv",
             "index": "apps/b-rv/src/index.html",
             "main": "apps/b-rv/src/main.ts",
@@ -570,9 +531,7 @@
               "apps/b-rv/src/BingSiteAuth.xml",
               "apps/b-rv/src/sitemap.xml"
             ],
-            "styles": [
-              "apps/b-rv/src/styles.scss"
-            ],
+            "styles": ["apps/b-rv/src/styles.scss"],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -637,9 +596,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/b-rv"
-          ],
+          "outputs": ["coverage/apps/b-rv"],
           "options": {
             "jestConfig": "apps/b-rv/jest.config.js",
             "passWithNoTests": true
@@ -668,9 +625,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/b-rv-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/b-rv-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -694,9 +649,7 @@
               "apps/b-ledgerentry/src/favicon.ico",
               "apps/b-ledgerentry/src/assets"
             ],
-            "styles": [
-              "apps/b-ledgerentry/src/styles.scss"
-            ],
+            "styles": ["apps/b-ledgerentry/src/styles.scss"],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -760,9 +713,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/b-ledgerentry"
-          ],
+          "outputs": ["coverage/apps/b-ledgerentry"],
           "options": {
             "jestConfig": "apps/b-ledgerentry/jest.config.js",
             "passWithNoTests": true
@@ -791,9 +742,127 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
+            "lintFilePatterns": ["apps/b-ledgerentry-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "p-marintegraal": {
+      "projectType": "application",
+      "root": "apps/p-marintegraal",
+      "sourceRoot": "apps/p-marintegraal/src",
+      "prefix": "vsoft-nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "allowedCommonJsDependencies": [
+              "alertifyjs",
+              "jspdf",
+              "jspdf-autotable",
+              "qrcode"
+            ],
+            "outputPath": "dist/apps/p-marintegraal",
+            "index": "apps/p-marintegraal/src/index.html",
+            "main": "apps/p-marintegraal/src/main.ts",
+            "polyfills": "apps/p-marintegraal/src/polyfills.ts",
+            "tsConfig": "apps/p-marintegraal/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/p-marintegraal/src/favicon.ico",
+              "apps/p-marintegraal/src/assets"
+            ],
+            "styles": ["apps/p-marintegraal/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/p-marintegraal/src/environments/environment.ts",
+                  "with": "apps/p-marintegraal/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "p-marintegraal:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "p-marintegraal:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "p-marintegraal:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
             "lintFilePatterns": [
-              "apps/b-ledgerentry-e2e/**/*.{js,ts}"
+              "apps/p-marintegraal/src/**/*.ts",
+              "apps/p-marintegraal/src/**/*.html"
             ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/p-marintegraal"],
+          "options": {
+            "jestConfig": "apps/p-marintegraal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "p-marintegraal-e2e": {
+      "root": "apps/p-marintegraal-e2e",
+      "sourceRoot": "apps/p-marintegraal-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/p-marintegraal-e2e/cypress.json",
+            "tsConfig": "apps/p-marintegraal-e2e/tsconfig.e2e.json",
+            "devServerTarget": "p-marintegraal:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "p-marintegraal:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/p-marintegraal-e2e/**/*.{js,ts}"]
           }
         }
       }

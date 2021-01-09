@@ -1,0 +1,29 @@
+<p-panel>
+  <p-header>{{ 'ACCOUNTS.newLabel' | translate }}</p-header>
+
+  <form [formGroup]="newForm">
+    <br>
+    <div class="form-group">
+      <input formControlName="id" placeholder="{{ 'ACCOUNTS.idLabel' | translate }}" type="text" size="15" pInputText>
+    </div>
+    <br>
+    <div class="form-group">
+      <input formControlName="v020" placeholder="{{ 'ACCOUNTS.v020Label' | translate }}" type="text" size="40"
+        pInputText>
+    </div>
+  </form>
+
+  <p-footer>
+    <div *ngIf="primeSpinner">
+      <i class="pi pi-spin pi-spinner" style="font-size: 3em"></i>
+    </div>
+    <div *ngIf="!primeSpinner">
+      <button pButton type="button" (click)="newRecord()" label="{{ 'COMMON.btnSubmit' | translate }}"
+        [disabled]="!newForm.valid" class="p-button-raised p-button-info" style="margin-right: .25em"></button>
+
+      <button pButton type="button" (click)="goBack()" icon="pi pi-step-backward" iconPos="right"
+        label="{{ 'COMMON.btnIgnore' | translate }}" class="p-button-secondary"></button>
+    </div>
+  </p-footer>
+
+</p-panel>

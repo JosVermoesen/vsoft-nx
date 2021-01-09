@@ -1,0 +1,11 @@
+<p-tabView (onChange)="handleChange($event)">
+
+  <p-tabPanel leftIcon="pi pi-step-backward">
+    <i class="pi pi-spin pi-spinner" style="font-size: 3em"></i>
+  </p-tabPanel>
+
+  <p-tabPanel header="{{ 'ACCOUNTS.detailsTab1' | translate }}" [selected]="true">
+    <vsoft-nx-ledgeraccount-ledgers></vsoft-nx-ledgeraccount-ledgers>
+  </p-tabPanel>
+
+</p-tabView>

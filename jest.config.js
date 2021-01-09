@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/apps/b-cdd',
     '<rootDir>/apps/b-rv',
     '<rootDir>/apps/b-ledgerentry',
+    '<rootDir>/apps/p-marintegraal',
   ],
 };

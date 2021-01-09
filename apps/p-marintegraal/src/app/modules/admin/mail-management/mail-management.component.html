@@ -1,0 +1,48 @@
+<p-panel>
+  <p-header>"Panel Header"</p-header>
+
+  <div *ngIf="customers">
+    <p-table [value]="customers">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Client Id and Name</th>
+          <th>Email</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-customer>
+        <tr>
+          <td>{{customer.id}}, {{customer.a100}} {{customer.a101}}</td>
+          <td>{{customer.v224}}</td>
+          <td>
+
+          </td>
+          <td>
+            <button pButton icon="pi pi-trash" (click)="remove(customer)" class="p-button-warning"
+              style="margin-right: .40em"></button>
+            <button pButton icon="pi pi-send" (click)="send(customer)"></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</p-panel>
+
+<!-- <div class="row">
+  <table class="table">
+    <tr>
+      <th style="width: 10%">Client Id & Name</th>
+      <th style="width: 20%">Mail Adress</th>
+      <th style="width: 5%"> </th>
+      <th style="width: 5%"> </th>
+      <th style="width: 5%"><button class="btn btn-info" (click)="sendAll()">Send All</button></th>
+    </tr>
+    <tr *ngFor="let customer of customers; index as i">
+      <td>{{customer.id}}, {{customer.a100}} {{customer.a101}}</td>
+      <td>{{customer.v224}}</td>
+      <td><button class="btn btn-info" (click)="remove(i)">Remove</button></td>
+      <td><button class="btn btn-info" (click)="send(i)">Send</button></td>
+    </tr>
+  </table>
+</div> -->

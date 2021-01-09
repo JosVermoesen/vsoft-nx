@@ -1,0 +1,19 @@
+<p-card>
+  <p-listbox [options]="languages" [(ngModel)]="selected" [listStyle]="{'max-height':'250px'}">
+    <ng-template let-lng pTemplate="item">
+      <!-- <div class="p-helper-clearfix"> -->
+      <div class="p-reset">
+        <img [src]="lng.img" style="display:inline-block;margin:5px 0 0 5px" width="48">
+        <span style="float:right;margin:20px 10px 0 0">{{ lng.text }}</span>
+      </div>
+    </ng-template>
+  </p-listbox>
+
+  <footer>
+    <br>
+    <button pButton type="button" (click)="select(selected)" icon="pi pi-check" label="{{ 'COMMON.btnOk' | translate }}"
+      class="p-button-info" style="margin-right: .25em"></button>
+    <button pButton type="button" (click)="onCanceled()" icon="pi pi-step-backward" iconPos="right"
+      label="{{ 'COMMON.btnIgnore' | translate }}" class="p-button-secondary"></button>
+  </footer>
+</p-card>

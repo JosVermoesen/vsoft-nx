@@ -1,0 +1,424 @@
+{
+  "def002-all": [
+    {
+      "actionCode": "todo",
+      "description": "Leverancier Code",
+      "fieldNameDB": "id",
+      "fieldType": "S",
+      "fieldMin": 1,
+      "fieldMax": 12,
+      "required": true,
+      "canEdit": false
+    },
+    {
+      "actionCode": "todo",
+      "description": "Title code",
+      "fieldNameDB": "a102",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Last name",
+      "fieldNameDB": "a100",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 35,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Title code (partner)",
+      "fieldNameDB": "vs01",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Last name (partner)",
+      "fieldNameDB": "a125",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 35,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Language code",
+      "fieldNameDB": "a10c",
+      "fieldType": "S",
+      "fieldMin": 1,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Street",
+      "fieldNameDB": "a104",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 30,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Number",
+      "fieldNameDB": "a105",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 5,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Box",
+      "fieldNameDB": "a106",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 4,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Postal code",
+      "fieldNameDB": "a107",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 7,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "City",
+      "fieldNameDB": "a108",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 24,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "ISO Country number",
+      "fieldNameDB": "v149",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 3,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Country code (Belgian bPost)",
+      "fieldNameDB": "a109",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 3,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "ISO Country code",
+      "fieldNameDB": "v150",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 2,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "ISO Currency code (EUR)",
+      "fieldNameDB": "vs03",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 3,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Phone number (fixed line)",
+      "fieldNameDB": "a10a",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 20,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Fax number",
+      "fieldNameDB": "vs02",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 12,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Email",
+      "fieldNameDB": "v224",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 60,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "connection stock",
+      "fieldNameDB": "v163",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 7,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "connection 6-account",
+      "fieldNameDB": "v016",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 7,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "connection 44-account",
+      "fieldNameDB": "v161",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 7,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "VAT number",
+      "fieldNameDB": "a161",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 15,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "BE banc account old format",
+      "fieldNameDB": "a170",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 14,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Banc accountIBAN",
+      "fieldNameDB": "v259",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Banc account BIC",
+      "fieldNameDB": "v260",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Fixed ref./agent number",
+      "fieldNameDB": "a400",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 10,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Registration number",
+      "fieldNameDB": "v015",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 10,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Medecontractant ",
+      "fieldNameDB": "v151",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Default VAT code",
+      "fieldNameDB": "v111",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Payment delay",
+      "fieldNameDB": "vs04",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 4,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "aardcode struct.mededeling",
+      "fieldNameDB": "v017",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Streefomzet",
+      "fieldNameDB": "v018",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 9,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Picture",
+      "fieldNameDB": "v001",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 30,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Video file",
+      "fieldNameDB": "v002",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 30,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Mobile Phone",
+      "fieldNameDB": "v226",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Date last visit",
+      "fieldNameDB": "v227",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Opmerkingen",
+      "fieldNameDB": "v247",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "SQL Aankoopverrichting",
+      "fieldNameDB": "v254",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Streefomzet",
+      "fieldNameDB": "decv018",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 9999999,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "??",
+      "fieldNameDB": "v255",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "??",
+      "fieldNameDB": "v256",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "??",
+      "fieldNameDB": "v262",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    }
+  ]
+}

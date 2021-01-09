@@ -1,0 +1,394 @@
+{
+  "def001-default": [
+    {
+      "actionCode": "todo",
+      "description": "Unique code number M.A.R.",
+      "fieldNameDB": "id",
+      "fieldType": "S",
+      "fieldMin": 1,
+      "fieldMax": 12,
+      "required": true,
+      "canEdit": false
+    },
+    {
+      "actionCode": "todo",
+      "description": "Language code",
+      "fieldNameDB": "a10c",
+      "fieldType": "S",
+      "fieldMin": 1,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Postal code",
+      "fieldNameDB": "a107",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 7,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "City",
+      "fieldNameDB": "a108",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 24,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Street",
+      "fieldNameDB": "a104",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 30,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Number",
+      "fieldNameDB": "a105",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 5,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Box",
+      "fieldNameDB": "a106",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 4,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Country code (Belgian bPost)",
+      "fieldNameDB": "a109",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 3,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "VAT number (BE format)",
+      "fieldNameDB": "a161",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 15,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "v151",
+      "fieldNameDB": "co-contractor (1=yes)",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Default VAT code",
+      "fieldNameDB": "v111",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "cloudlink (myDocuments)",
+      "fieldNameDB": "v254",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 150,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Payment term",
+      "fieldNameDB": "vs04",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 4,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Date last visit",
+      "fieldNameDB": "v227",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "(local)server guid (myDocuments)",
+      "fieldNameDB": "v247",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 150,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Phone number (fixed line)",
+      "fieldNameDB": "a10a",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 20,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Fax number",
+      "fieldNameDB": "vs02",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 12,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Martial status",
+      "fieldNameDB": "a123",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Code sex (3= legal person/rechtspersoon)",
+      "fieldNameDB": "a124",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Code nationality",
+      "fieldNameDB": "a121",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 3,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "RR number 1",
+      "fieldNameDB": "v301",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 11,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Title code",
+      "fieldNameDB": "a102",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Last name",
+      "fieldNameDB": "a100",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 35,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "First name",
+      "fieldNameDB": "a101",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 15,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Mobile phone (main)",
+      "fieldNameDB": "v226",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 16,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "First email address",
+      "fieldNameDB": "v224",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 60,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Phone (work)",
+      "fieldNameDB": "v243",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "IBAN account number",
+      "fieldNameDB": "v259",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "BIC banc account",
+      "fieldNameDB": "v260",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Banc account (BE old format)",
+      "fieldNameDB": "a170",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 14,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "RR number (partner)",
+      "fieldNameDB": "v302",
+      "fieldType": "S",
+      "fieldMin": 11,
+      "fieldMax": 11,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Title code (partner)",
+      "fieldNameDB": "vs01",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 1,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Last name (partner)",
+      "fieldNameDB": "a125",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 35,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "First name (partner)",
+      "fieldNameDB": "a127",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 15,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Mobile phone (partner)",
+      "fieldNameDB": "v244",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "email2 (partner)",
+      "fieldNameDB": "v002",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 60,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "IBAN banc account2 (partner)",
+      "fieldNameDB": "v257",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "BIC banc account2 (partner)",
+      "fieldNameDB": "v258",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    },
+    {
+      "actionCode": "todo",
+      "description": "Old BE banc account (partner)",
+      "fieldNameDB": "v251",
+      "fieldType": "S",
+      "fieldMin": 0,
+      "fieldMax": 50,
+      "required": false,
+      "canEdit": true
+    }
+  ]
+}

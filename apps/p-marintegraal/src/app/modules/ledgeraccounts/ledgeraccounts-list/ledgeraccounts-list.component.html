@@ -1,0 +1,71 @@
+<p-panel>
+  <p-header>{{ 'ACCOUNTS.title' | translate }}</p-header>
+
+  <p-table [columns]="cols" [value]="dataSource" [lazy]="true" (onLazyLoad)="pageChanged($event)" [paginator]="true"
+    [rows]="5" [totalRecords]="[numberOfRecords]" [loading]="spinner">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th style="width:4em"></th>
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+        <th style="width:4em"></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td>
+          <button pButton icon="pi pi-user-edit" (click)="selectForEdit(rowData)"></button>
+        </td>
+        <td *ngFor="let col of columns">
+          {{rowData[col.field]}}
+        </td>
+        <td>
+          <button pButton icon="pi pi-search" (click)="selectForDetails(rowData)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-footer>
+    <button pButton type="button" icon="pi pi-plus" (click)="addNew()" label="{{ 'COMMON.btnAdd' | translate }}" class="p-button-info"
+      style="margin-right: .25em"></button>
+  </p-footer>
+</p-panel>
+
+
+<!-- <div class="customer-list">
+  <div fxLayoutAlign="center center">
+    <mat-form-field fxFlex="10%">
+      <input [(ngModel)]="customerParams.minA107" matInput type="text" placeholder="Postal From">
+    </mat-form-field>
+    <mat-form-field fxFlex="10%">
+      <input [(ngModel)]="customerParams.maxA107" matInput type="text" placeholder="Postal To">
+    </mat-form-field>
+    <button (click)="loadCustomers()" mat-raised-button color="primary">Apply</button>
+    <button (click)="resetFilters()" mat-raised-button color="warn">Reset</button>
+  </div>
+  <mat-table [dataSource]="dataMatSourceCustomers" matSort>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="a100">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.a100 }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="a107">
+      <mat-header-cell *matHeaderCellDef>Postal Code</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.a107 }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="a104">
+      <mat-header-cell *matHeaderCellDef>Street</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.a104 }}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumnsCustomers"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumnsCustomers;" (click)="isClicked(row)"></mat-row>
+  </mat-table>
+  <mat-paginator [length]="pagination.totalItems" [pageSize]="5" [pageSizeOptions]="[5, 10]" (page)="pageChanged($event)">
+  </mat-paginator>
+</div>
+ -->

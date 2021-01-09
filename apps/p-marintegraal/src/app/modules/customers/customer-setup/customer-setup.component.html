@@ -1,0 +1,21 @@
+<div class="p-grid">
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <p-listbox class="p-g p-fluid" [listStyle]="{'max-height':'400px'}"
+      [options]="selectedDefs" [(ngModel)]="selectedDef" filter="filter" optionLabel="description">
+      <p-header>
+        {{ 'CUSTOMERS.choosenLabel' | translate }}
+      </p-header>
+    </p-listbox>
+  </div>
+
+  <div class="p-col-12 p-md-6 p-lg-6">
+    <p-listbox (onClick)="autoSave(selectedDefs)" class="p-g p-fluid" [listStyle]="{'max-height':'400px'}"
+      [options]="customerDefs" [(ngModel)]="selectedDefs" multiple="multiple" checkbox="checkbox" filter="filter"
+      optionLabel="description">
+      <p-header>
+        {{ 'CUSTOMERS.availableLabel' | translate }}
+      </p-header>
+    </p-listbox>
+  </div>
+</div>

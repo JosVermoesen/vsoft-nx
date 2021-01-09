@@ -1,0 +1,49 @@
+<p-card>
+  <p-header>
+    <!-- {{ cardTitle }} -->
+  </p-header>
+
+  <form [formGroup]="dialogForm">
+    <div class="form-group">
+      <div *ngIf="this.canEdit">
+        <input formControlName="fieldVal" pInputText [type]="[this.fieldType]" placeholder="{{ labelOfField }}"
+          size="30">
+      </div>
+
+      <div *ngIf="!this.canEdit">
+        <input readonly formControlName="fieldVal" pInputText [type]="[this.fieldType]" size="30">
+      </div>
+    </div>
+  </form>
+
+  <p-footer>
+    <div *ngIf="this.canEdit">
+      <button pButton type="button" (click)="onSubmit()" icon="pi pi-check" [disabled]="!dialogForm.valid"
+        label="{{ 'COMMON.btnOk' | translate }}" class="p-button-info" style="margin-right: .25em"></button>
+      <button pButton type="button" (click)="onCanceled()" icon="pi pi-step-backward" iconPos="right"
+        label="{{ 'COMMON.btnIgnore' | translate }}" class="p-button-secondary"></button>
+    </div>
+    <div *ngIf="!this.canEdit">
+      <button pButton type="button" (click)="onCanceled()" icon="pi pi-step-backward" iconPos="right"
+        label="{{ 'COMMON.btnIgnore' | translate }}" class="p-button-secondary"></button>
+    </div>
+  </p-footer>
+</p-card>
+
+<!-- If more then one field -->
+<!-- <br>
+  <div class="form-group">
+    <div *ngIf="this.canEdit">
+      <span class="p-float-label">
+        <input formControlName="fieldVal" id="float-input" [type]="[this.fieldType]" size="36" pInputText>
+        <label for="float-input">{{ labelOfField }}</label>
+      </span>
+    </div>
+
+    <div *ngIf="!this.canEdit">
+      <span class="p-float-label">
+        <input readonly formControlName="fieldVal" id="float-input" [type]="[this.fieldType]" size="36" pInputText>
+        <label for="float-input">{{ labelOfField }}</label>
+      </span>
+    </div>
+  </div> -->
