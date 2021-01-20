@@ -55,6 +55,11 @@ const routes: Routes = [
       import('./modules/gadgets/gadgets.module').then((m) => m.GadgetsModule),
   },
   {
+    path: 'offers',
+    loadChildren: () =>
+      import('./modules/offers/offers.module').then((m) => m.OffersModule),
+  },
+  {
     path: 'steppertest',
     loadChildren: () =>
       import('./modules/steppertest/steppertest.module').then(

@@ -8,6 +8,7 @@ import {
 import { AuthService } from '../_services/auth.service';
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '[appHasRole]'
 })
 export class HasRoleDirective implements OnInit {

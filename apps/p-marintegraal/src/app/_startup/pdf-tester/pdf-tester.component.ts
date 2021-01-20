@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient } from '@angular/common/http';
 import { AbstractClassPart } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
@@ -6,7 +7,7 @@ import { NgxQrcodeElementTypes } from '@techiediaries/ngx-qrcode';
 import * as jsPDF from 'jspdf';
 
 @Component({
-  selector: 'vsoft-nxpdf-tester',
+  selector: 'vsoft-nx-pdf-tester',
   templateUrl: './pdf-tester.component.html'
 })
 export class PdfTesterComponent implements OnInit {
@@ -49,7 +50,7 @@ export class PdfTesterComponent implements OnInit {
   testPdf() {
     const pdfDoc = new jsPDF();
     pdfDoc.setFontSize(40);
-    pdfDoc.text("We love jsPDF", 55, 25);
+    pdfDoc.text('We love jsPDF', 55, 25);
 
     pdfDoc.setFontSize(18);
     pdfDoc.text('My PDF Title FontSize 18 at yRow 258 xColumn 11', 11, 258);

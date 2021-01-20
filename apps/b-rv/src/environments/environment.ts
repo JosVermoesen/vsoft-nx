@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  version: '0.1.1',
+  version: '11.2.0',
 
   // https should be http when SSL not enabled
   // marIntegraal Service Plus users can get our dotnet core api source code
