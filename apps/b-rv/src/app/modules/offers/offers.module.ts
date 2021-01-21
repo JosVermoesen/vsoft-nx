@@ -16,6 +16,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { OffersRoutingModule } from './offers-routing.module';
 import { OffersComponent } from './offers.component';
 import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   declarations: [OffersComponent],
@@ -30,6 +31,7 @@ import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
       },
     }),
     AlertModule.forRoot(),
+    TabsModule.forRoot(),
     NgxQRCodeModule,
     ReactiveFormsModule,
     VsoftInterfacesModule

@@ -40,7 +40,7 @@ export class OffersComponent implements OnInit {
 
   gadgetsMail: IContactmail;
   templateName = 'ea-offer-medicall.html';
-  mailSubject = 'EUROP ASSISTANCE aanbod MEDICALL uw tarief:';
+  mailSubject = 'Europ Assistance MEDICALL';
   templateBody: string = null;
 
   form: FormGroup;
@@ -79,11 +79,12 @@ export class OffersComponent implements OnInit {
 
   ngOnInit(): void {
     this.qrRefresh();
-    // http://localhost:4200/#/offers?email=josvermoesen@outlook.be&name=joske
+    // http://localhost:4200/#/offers?email=josvermoesen@outlook.be&name=joske&reference=123/4567/89112
     this.activatedRoute.queryParams.subscribe((params) => {
       this.urlId = params['id'];
       this.urlEmail = params['email'];
       this.urlName = params['name'];
+      this.qrReferenceValue = params['reference'];
 
       /* console.log('in url: ', this.urlG101);
       switch (this.urlG101) {
