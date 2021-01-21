@@ -1,81 +1,85 @@
 <!-- ACCORDION -->
 <section id="accordeon-dashboard" class="text-center py-2">
-    <div class="container">
-        <accordion [isAnimated]="true" [closeOthers]="accordeonOneAtATime">
+  <div class="container">
+    <accordion [isAnimated]="true" [closeOthers]="accordeonOneAtATime">
 
-            <accordion-group heading="Modules Verzekeringen">
-                <div class="text-center">
-                    <a routerLink="/ins-fire" class="nav-link">Brand</a>
-                    <a routerLink="/ins-car" class="nav-link">Voertuigen</a>
-                    <!-- <a routerLink="/ins-investment" class="nav-link">Beleggen</a> -->
-                </div>
-            </accordion-group>
+      <accordion-group heading="Modules Verzekeringen">
+        <div class="text-center">
+          <a routerLink="/ins-fire" class="nav-link">Brand</a>
+          <a routerLink="/ins-car" class="nav-link">Voertuigen</a>
+          <!-- <a routerLink="/ins-investment" class="nav-link">Beleggen</a> -->
+        </div>
+      </accordion-group>
 
-            <accordion-group heading="Links">
-                <div class="text-center">
-                    <a href="https://app.sectorcatalog.be/SectorCatalog/public?language=NL" target="_blank">Documenten
-                        verzekeringen (IBP)</a><br><br>
-                </div>
+      <accordion-group heading="Links">
+        <div class="text-center">
+          <a href="https://app.sectorcatalog.be/SectorCatalog/public?language=NL" target="_blank">Documenten
+            verzekeringen (IBP)</a><br><br>
+        </div>
 
-                <div class="text-center">
-                    <a href="http://011578.brokerweb.be/nl/" target="_blank">Ons BROCOM info portaal</a><br><br>
-                </div>
+        <div class="text-center">
+          <a href="http://011578.brokerweb.be/nl/" target="_blank">Ons BROCOM info portaal</a><br><br>
+        </div>
 
-                <div class="text-center">
-                    <a href="https://eservices.minfin.fgov.be/mandates/extern/" target="_blank">TOW mandaat
-                        bevestigen</a><br><br>
-                </div>
+        <div class="text-center">
+          <a href="https://eservices.minfin.fgov.be/mandates/extern/" target="_blank">TOW mandaat
+            bevestigen</a><br><br>
+        </div>
 
-                <div class="text-center">
-                    <a href="https://www.wonenvlaanderen.be/" target="_blank">Wonen in Vlaanderen</a><br><br>
-                </div>
-                <!-- <div class="nav-link text-center">
+        <div class="text-center">
+          <a href="https://www.wonenvlaanderen.be/" target="_blank">Wonen in Vlaanderen</a><br><br>
+        </div>
+        <!-- <div class="nav-link text-center">
                     <div *ngIf="livingFlandersHtml">
                         <div [innerHTML]="livingFlandersHtml | mdToHtml"></div>
                     </div>
                 </div> -->
 
-                <div class="text-center">
-                    <a href="https://justitie.belgium.be/nl/belgisch_staatsblad" target="_blank">Belgisch Staatsblad</a><br><br>
-                </div>
+        <div class="text-center">
+          <a href="https://justitie.belgium.be/nl/belgisch_staatsblad" target="_blank">Belgisch Staatsblad</a><br><br>
+        </div>
 
-                <div class="text-center">
-                    <a href="https://play.google.com/store/apps/details?id=be.vsoft.portfolio" target="_blank">Vsoft
-                        Android Portfolio App</a><br><br>
-                </div>
+        <div class="text-center">
+          <a href="https://territoriale-bevoegdheid.just.fgov.be/cgi-main/competence-territoriale.pl" target="_blank">Bevoegdheid Rechtbanken</a><br><br>
+        </div>
 
-                <div class="text-center">
-                    <a href="https://play.google.com/store/apps/details?id=be.vsoft.android.besepaws"
-                        target="_blank">Vsoft Android SepaWS App</a><br><br>
-                </div>
+        <div class="text-center">
+          <a href="https://play.google.com/store/apps/details?id=be.vsoft.portfolio" target="_blank">Vsoft
+            Android Portfolio App</a><br><br>
+        </div>
 
-            </accordion-group>
+        <div class="text-center">
+          <a href="https://play.google.com/store/apps/details?id=be.vsoft.android.besepaws" target="_blank">Vsoft
+            Android SepaWS App</a><br><br>
+        </div>
 
-            <accordion-group heading="Noodnummers">
-                <div class="text-center">
-                    <div class="card border-primary mb-resp">
-                        <div class="card-body">
-                            <p>Medische spoedgevallen en brandweer: 100 (enkel in België) of 112 (heel Europa)</p>
-                            <p>Dringende politiehulp: 101</p>
-                            <p>Anti-gifcentrum: 070/245.245</p>
-                            <p>Algemene inlichtingen: 1207</p>
-                            <p>Awel, de vroegere kinder- en jongerentelefoon: 102</p>
-                            <p>Card Stop: 070/344.344</p>
-                            <p>Child Focus: 116000</p>
-                            <p>De druglijn: 078/15.10.20</p>
-                            <p>Docstop, bij diefstal identiteitskaart of paspoort: 00800 2123 2123</p>
-                            <p>Meldpunt geweld: 1712</p>
-                            <p>Permanentiedienst apotheker: 0900/10.500</p>
-                            <p>Rode Kruis: 105</p>
-                            <p>Tele-onthaal: 106</p>
-                            <p>Teleblok (studenten): 0800/13.14.4</p>
-                            <p>Vlaamse infolijn: 1700</p>
-                            <p>Zelfmoordlijn: 1813</p>
-                        </div>
-                    </div>
-                </div>
-            </accordion-group>
+      </accordion-group>
 
-        </accordion>
-    </div>
+      <accordion-group heading="Noodnummers">
+        <div class="text-center">
+          <div class="card border-primary mb-resp">
+            <div class="card-body">
+              <p>Medische spoedgevallen en brandweer: 100 (enkel in België) of 112 (heel Europa)</p>
+              <p>Dringende politiehulp: 101</p>
+              <p>Anti-gifcentrum: 070/245.245</p>
+              <p>Algemene inlichtingen: 1207</p>
+              <p>Awel, de vroegere kinder- en jongerentelefoon: 102</p>
+              <p>Card Stop: 070/344.344</p>
+              <p>Child Focus: 116000</p>
+              <p>De druglijn: 078/15.10.20</p>
+              <p>Docstop, bij diefstal identiteitskaart of paspoort: 00800 2123 2123</p>
+              <p>Meldpunt geweld: 1712</p>
+              <p>Permanentiedienst apotheker: 0900/10.500</p>
+              <p>Rode Kruis: 105</p>
+              <p>Tele-onthaal: 106</p>
+              <p>Teleblok (studenten): 0800/13.14.4</p>
+              <p>Vlaamse infolijn: 1700</p>
+              <p>Zelfmoordlijn: 1813</p>
+            </div>
+          </div>
+        </div>
+      </accordion-group>
+
+    </accordion>
+  </div>
 </section>

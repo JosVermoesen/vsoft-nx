@@ -25,6 +25,7 @@ export class OffersComponent implements OnInit {
   choiseMade = false;
   hidePerson2 = true;
   hidePerson3 = true;
+  numberInsured = 0;
 
   qrElementType = 'url';
   // qrValue = 'https://github.com/JosVermoesen/ing-portfolio';
@@ -46,10 +47,9 @@ export class OffersComponent implements OnInit {
   form: FormGroup;
   urlEmail: string = null;
   urlName: string = null;
+  urlId: string = null;
 
   offerForm: FormGroup;
-
-  urlId: string;
 
   /* MEDICALL eerste jaarpremie:
   EUR 36.75 => Een verzekerde
@@ -78,33 +78,130 @@ export class OffersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.qrRefresh();
     // http://localhost:4200/#/offers?email=josvermoesen@outlook.be&name=joske&reference=123/4567/89112
     this.activatedRoute.queryParams.subscribe((params) => {
       this.urlId = params['id'];
       this.urlEmail = params['email'];
       this.urlName = params['name'];
       this.qrReferenceValue = params['reference'];
-
-      /* console.log('in url: ', this.urlG101);
-      switch (this.urlG101) {
-        case '0': // post only
-          this.urlG101 = this.sendOptions[0].option;
-          break;
-
-        case '1': // post only
-          this.urlG101 = this.sendOptions[1].option;
-          break;
-
-        case '2': // post only
-          this.urlG101 = this.sendOptions[2].option;
-          break;
-      }
-      console.log('and after: ', this.urlG101); */
     });
-
     this.seoS.setAll('MAILFORM');
     this.initTemplate();
+  }
+
+  submitGadgetMail() {
+    this.refreshTemplateBody();
+    this.gadgetsMail = Object.assign({}, this.form.value);
+    console.log(this.gadgetsMail);
+    this.busy = true;
+    this.ms.sendMail(this.gadgetsMail).subscribe(
+      () => {
+        this.ts.get('CONTACT.SendSuccess').subscribe((res: string) => {
+          this.ngxAlert('success', res);
+        });
+      },
+      (error) => {
+        console.log(error);
+        this.ts.get('CONTACT.SendFailed').subscribe((res: string) => {
+          this.ngxAlert('danger', res);
+          this.busy = false;
+        });
+      },
+      () => {
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, this.waitMilliseconds);
+        this.busy = false;
+      }
+    );
+  }
+
+  refreshTemplateBody() {
+    const stringToReplace = '.{name}';
+    // name insert
+    this.templateBody = this.templateBody.replace(
+      stringToReplace,
+      this.form.value.name
+    );
+
+    // check select
+    const cOption = '.{option}';
+    this.templateBody =
+      this.templateBody.replace(cOption, this.offerForm.value.optionChoise.option);
+
+    this.form.value.message = JSON.stringify(this.offerForm.value);
+    this.form.value.template = this.templateBody;
+  }
+
+  onChange() {
+    const chosen: string = this.offerForm.value.optionChoise.option.substring(0, 1);
+    this.choiseMade = true;
+    switch (chosen) {
+      case '1':
+        this.qrAmountValue = 'EUR36.75';
+        this.hidePerson2 = true;
+        this.hidePerson3 = true;
+        this.numberInsured = 1;
+        break;
+
+      case '2':
+        this.qrAmountValue = 'EUR51.75';
+        this.hidePerson2 = false;
+        this.hidePerson3 = true;
+        this.numberInsured = 2;
+        break;
+
+      case '3':
+        this.qrAmountValue = 'EUR74.25';
+        this.hidePerson2 = false;
+        this.hidePerson3 = false;
+        this.numberInsured = 3;
+        break;
+    }
+    this.qrRefresh();
+    this.createOffersForm();
+  }
+
+  createOffersForm() {
+    this.offerForm = null;
+    switch (this.numberInsured) {
+      case 0:
+      case 1:
+        this.offerForm = this.fb.group({
+          optionChoise: [null],
+          person1: [this.urlName, Validators.required],
+          birthday1: [null, Validators.required],
+          person2: [null],
+          birthday2: [null],
+          person3: [null],
+          birthday3: [null]
+        });
+        break;
+
+      case 2:
+        this.offerForm = this.fb.group({
+          optionChoise: [null],
+          person1: [this.urlName, Validators.required],
+          birthday1: [null, Validators.required],
+          person2: [null, Validators.required],
+          birthday2: [null, Validators.required],
+          person3: [null],
+          birthday3: [null]
+        });
+        break;
+
+      case 3:
+        this.offerForm = this.fb.group({
+          optionChoise: [null],
+          person1: [this.urlName, Validators.required],
+          birthday1: [null, Validators.required],
+          person2: [null, Validators.required],
+          birthday2: [null, Validators.required],
+          person3: [null, Validators.required],
+          birthday3: [null, Validators.required]
+        });
+        break;
+    }
   }
 
   qrRefresh() {
@@ -141,20 +238,12 @@ export class OffersComponent implements OnInit {
         // console.log(data);
         this.templateBody = data;
         this.createOffersForm();
+        this.mainForm();
+        this.qrRefresh();
       });
   }
 
-  createOffersForm() {
-    this.offerForm = this.fb.group({
-      optionChoise: [null],
-      person1: [this.urlName, Validators.required],
-      birthday1: [null, Validators.required],
-      person2: [null],
-      birthday2: [null],
-      person3: [null],
-      birthday3: [null]
-    });
-
+  mainForm() {
     this.form = this.fb.group({
       subject: [this.mailSubject + ' {' + this.urlId + '}', Validators.required],
       name: [this.urlName, Validators.required],
@@ -184,50 +273,6 @@ export class OffersComponent implements OnInit {
     });
   }
 
-  refreshTemplateBody() {
-    const stringToReplace = '.{name}';
-    // name insert
-    this.templateBody = this.templateBody.replace(
-      stringToReplace,
-      this.form.value.name
-    );
-
-    // check select g101
-    const cOption = '.{option}';
-    this.templateBody =
-      this.templateBody.replace(cOption, this.offerForm.value.optionChoise.option);
-
-    this.form.value.message = JSON.stringify(this.offerForm.value);
-    this.form.value.template = this.templateBody;
-  }
-
-  submitGadgetMail() {
-    this.refreshTemplateBody();
-    this.gadgetsMail = Object.assign({}, this.form.value);
-    console.log(this.gadgetsMail);
-    this.busy = true;
-    this.ms.sendMail(this.gadgetsMail).subscribe(
-      () => {
-        this.ts.get('CONTACT.SendSuccess').subscribe((res: string) => {
-          this.ngxAlert('success', res);
-        });
-      },
-      (error) => {
-        console.log(error);
-        this.ts.get('CONTACT.SendFailed').subscribe((res: string) => {
-          this.ngxAlert('danger', res);
-          this.busy = false;
-        });
-      },
-      () => {
-        setTimeout(() => {
-          this.router.navigate(['/home']);
-        }, this.waitMilliseconds);
-        this.busy = false;
-      }
-    );
-  }
-
   ngxAlert(ofType: string, message: string): void {
     this.alerts.push({
       type: ofType,
@@ -238,30 +283,5 @@ export class OffersComponent implements OnInit {
 
   onClosed(dismissedAlert: AlertComponent): void {
     this.alerts = this.alerts.filter((alert) => alert !== dismissedAlert);
-  }
-
-  onChange() {
-    const chosen: string = this.offerForm.value.optionChoise.option.substring(0, 1);
-    this.choiseMade = true;
-    switch (chosen) {
-      case '1':
-        this.qrAmountValue = 'EUR36.75';
-        this.hidePerson2 = true;
-        this.hidePerson3 = true;
-        break;
-
-      case '2':
-        this.qrAmountValue = 'EUR51.75';
-        this.hidePerson2 = false;
-        this.hidePerson3 = true;
-        break;
-
-      case '3':
-        this.qrAmountValue = 'EUR74.25';
-        this.hidePerson2 = false;
-        this.hidePerson3 = false;
-        break;
-    }
-    this.qrRefresh();
   }
 }

@@ -65,11 +65,13 @@
                     <div *ngIf="!hidePerson2">
                       <div class="row">
                         <div class="col-md-6">
-                          <vsoft-nx-text-input formControlName="person2" label="Verzekerde2">
+                          <vsoft-nx-text-input formControlName="person2" label="Verzekerde2"
+                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
                         <div class="col-md-6">
-                          <vsoft-nx-text-input formControlName="birthday2" label="Geboortedatum2 dd/mm/jjjj">
+                          <vsoft-nx-text-input formControlName="birthday2" label="Geboortedatum2 dd/mm/jjjj"
+                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
                       </div>
@@ -78,12 +80,14 @@
                     <div *ngIf="!hidePerson3">
                       <div class="row">
                         <div class="col-md-6">
-                          <vsoft-nx-text-input formControlName="person3" label="Verzekerde3">
+                          <vsoft-nx-text-input formControlName="person3" label="Verzekerde3"
+                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
 
                         <div class="col-md-6">
-                          <vsoft-nx-text-input formControlName="birthday3" label="Geboortedatum3 dd/mm/jjjj">
+                          <vsoft-nx-text-input formControlName="birthday3" label="Geboortedatum3 dd/mm/jjjj"
+                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
                       </div>
@@ -110,7 +114,7 @@
                   <div class="col-md-9">
                     <div class="form-group">
                       <pre class="card card-block card-header">
-                        <strong>Schrijf over of scan de QR Code</strong>
+                        <strong>Overschrijven of scan de QR Code</strong>
                         <strong> </strong>
                         <strong>Bedrag: {{ qrAmountValue }}</strong>
                         <strong>Naar: BE83891854037015</strong>
