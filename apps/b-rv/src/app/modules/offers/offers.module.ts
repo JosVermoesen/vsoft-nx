@@ -18,6 +18,8 @@ import { OffersComponent } from './offers.component';
 import { VsoftInterfacesModule } from '@vsoft-nx/vsoft-interfaces';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 @NgModule({
   declarations: [OffersComponent],
   imports: [
@@ -32,6 +34,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     }),
     AlertModule.forRoot(),
     TabsModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     NgxQRCodeModule,
     ReactiveFormsModule,
     VsoftInterfacesModule

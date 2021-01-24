@@ -17,15 +17,15 @@
       <div class="card p-4">
         <div class="card card-body mb-3">
           <div>
+            <p>
+              <button type="button" class="btn btn-primary btn-sm" (click)="enableTabs()">
+                Enable tabs
+              </button>
+              <button type="button" class="btn btn-primary btn-sm" (click)="disableTabs()">
+                Disable tabs
+              </button>
+            </p>
             <tabset #staticTabs>
-              <tab heading="Info">
-                <div *ngFor="let alert of alerts">
-                  <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">
-                    {{ alert.msg }}</alert>
-                </div>
-
-              </tab>
-
               <tab heading="1. Kies">
                 <div *ngFor="let alert of alerts">
                   <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">
@@ -35,7 +35,7 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <select formControlName="optionChoise" class="form-control" (change)="onChange($event)">
+                        <select class="form-control" (change)="onChange($event)">
                           <option selected [ngValue]="null" disabled>Maak uw keuze</option>
                           <option *ngFor="let item of offerOptions" [ngValue]="item">
                             {{ item.option }}
@@ -56,9 +56,14 @@
                         </vsoft-nx-text-input>
                       </div>
                       <div class="col-md-6">
-                        <vsoft-nx-text-input formControlName="birthday1" label="Geboortedatum1 dd/mm/jjjj"
+                        <vsoft-nx-text-input formControlName="birthDay1" type="date" label="Geboortedatum1"
                           warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                         </vsoft-nx-text-input>
+                        <!-- <input class="form-control" #datepickerDMY="bsDatepicker" bsDatepicker formControlName="birthDay1"
+                        [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-default' }"> -->
+                        <!-- <vsoft-nx-date-input formControlName="birthDay1" label="Geboortedatum"
+                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
+                        </vsoft-nx-date-input> -->
                       </div>
                     </div>
 
@@ -66,12 +71,12 @@
                       <div class="row">
                         <div class="col-md-6">
                           <vsoft-nx-text-input formControlName="person2" label="Verzekerde2"
-                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
+                            warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
                         <div class="col-md-6">
-                          <vsoft-nx-text-input formControlName="birthday2" label="Geboortedatum2 dd/mm/jjjj"
-                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
+                          <vsoft-nx-text-input formControlName="birthDay2" type="date" label="Geboortedatum2"
+                            warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
                       </div>
@@ -81,13 +86,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <vsoft-nx-text-input formControlName="person3" label="Verzekerde3"
-                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
+                            warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
 
                         <div class="col-md-6">
-                          <vsoft-nx-text-input formControlName="birthday3" label="Geboortedatum3 dd/mm/jjjj"
-                          warningMessage="{{ 'COMMON.IsRequired' | translate }}">
+                          <vsoft-nx-text-input formControlName="birthDay3" type="date" label="Geboortedatum3"
+                            warningMessage="{{ 'COMMON.IsRequired' | translate }}">
                           </vsoft-nx-text-input>
                         </div>
                       </div>
@@ -163,10 +168,53 @@
                   </div>
                 </form>
               </tab>
+
+              <tab heading="Info">
+                <div *ngFor="let alert of alerts">
+                  <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">
+                    {{ alert.msg }}</alert>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card text-center border-primary mb-resp">
+                      <a href="https://docs.vsoft.be/pdf/insurance/offers/ea/medical/GA11.pdf" target="_blank"
+                        class="nav-link">IPID</a>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center border-primary mb-resp">
+                      <a href="https://docs.vsoft.be/pdf/insurance/offers/ea/medical/medicall-nl.pdf" target="_blank"
+                        class="nav-link">Product Fiche</a>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-center border-primary mb-resp">
+                      <a href="https://docs.vsoft.be/pdf/insurance/offers/ea/medical/general-conditions.pdf"
+                        target="_blank" class="nav-link">Algemene Voorwaarden</a>
+                    </div>
+                  </div>
+                </div>
+              </tab>
             </tabset>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- <div>
+    <p>Tabs can be enabled or disabled by changing <code>disabled</code> input property</p>
+    <p>
+      <button type="button" class="btn btn-primary btn-sm" (click)="disableEnable()">
+        Enable / Disable third tab
+      </button>
+    </p>
+    <hr />
+    <tabset #staticTabs>
+      <tab heading="Static title">Static content</tab>
+      <tab heading="Static Title 1">Static content 1</tab>
+      <tab heading="Static Title 2">Static content 2</tab>
+      <tab heading="Static Title 3">Static content 3</tab>
+    </tabset>
+  </div> -->
 </div>

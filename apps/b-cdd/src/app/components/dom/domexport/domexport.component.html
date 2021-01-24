@@ -14,7 +14,7 @@
         placeholder="{{ 'CDDEXPORT.CreationDateLabel' | translate }}">
       <input type="text" class="form-control" formControlName="domInfoText"
         placeholder="{{ 'CDDEXPORT.CDDAboutLabel' | translate }}">
-      <input class="form-control" #datepickerYMD="bsDatepicker" bsDatepicker formControlName="domMemoDate" 
+      <input class="form-control" #datepickerYMD="bsDatepicker" bsDatepicker formControlName="domMemoDate"
         [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD', containerClass: 'theme-default' }">
     </div>
 
@@ -32,7 +32,7 @@
         [disabled]="!domExportForm.valid">
       <button type="button" class="btn btn-warning"
         (click)="clearState()">{{ 'CDDEXPORT.ClearButtonLabel' | translate }}
-      </button>   
+      </button>
     </div>
   </form>
 </div>

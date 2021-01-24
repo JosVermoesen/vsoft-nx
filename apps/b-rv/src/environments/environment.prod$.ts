@@ -18,6 +18,11 @@ export const environment = {
     token: 'e92105b30fe907b0de47100961329d50bec5e0476f55473e1b821e4919e4a26e'
   },
 
+  // your banking info
+  brokerIban: 'BE83891854037015',
+  brokerBic: 'VDSPBE91',
+  brokerName: 'Roelandt en Vermoesen bv',
+
   // add your apiKeys for contactmail functionality
   apiVsoftMailGuid: 'your guid',
   apiVsoftSendFromAddress: 'your mailadress',

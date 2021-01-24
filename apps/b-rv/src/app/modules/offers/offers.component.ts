@@ -1,11 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+// import * as moment from 'moment';
+
 import { TranslateService } from '@ngx-translate/core';
+
 import { AlertComponent } from 'ngx-bootstrap/alert/alert.component';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 import { environment } from '../../../environments/environment';
 import { IContactmail } from './models/contactmail';
@@ -18,6 +22,8 @@ import { SeoService } from './../../shared/services/seo.service';
   styleUrls: ['./offers.component.scss'],
 })
 export class OffersComponent implements OnInit {
+  @ViewChild('staticTabs', { static: false }) staticTabs: TabsetComponent;
+
   waitMilliseconds = 2000;
   busy = false;
   alerts: any[] = [{}];
@@ -28,18 +34,16 @@ export class OffersComponent implements OnInit {
   numberInsured = 0;
 
   qrElementType = 'url';
-  // qrValue = 'https://github.com/JosVermoesen/ing-portfolio';
   qrResult: any;
   qrValue: any;
 
-  qrIbanValue = 'BE83891854037015';
-  qrBicValue = 'VDSPBE91';
-  qrNameValue = 'Roelandt en Vermoesen bv';
+  qrIbanValue = environment.brokerIban;
+  qrBicValue = environment.brokerIban;
+  qrNameValue = environment.brokerName;
+  qrAmountValue: string = null;
+  qrReferenceValue: string = null;
 
-  qrAmountValue = 'EUR74.25';
-  qrReferenceValue = '107/0404/08059'
-
-  gadgetsMail: IContactmail;
+  offersMail: IContactmail;
   templateName = 'ea-offer-medicall.html';
   mailSubject = 'Europ Assistance MEDICALL';
   templateBody: string = null;
@@ -78,7 +82,7 @@ export class OffersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // http://localhost:4200/#/offers?email=josvermoesen@outlook.be&name=joske&reference=123/4567/89112
+    // http://localhost:4200/#/offers?id=010018&email=josvermoesen@outlook.be&name=Vermoesen Jos&reference=123/4567/89112
     this.activatedRoute.queryParams.subscribe((params) => {
       this.urlId = params['id'];
       this.urlEmail = params['email'];
@@ -90,11 +94,15 @@ export class OffersComponent implements OnInit {
   }
 
   submitGadgetMail() {
+
     this.refreshTemplateBody();
-    this.gadgetsMail = Object.assign({}, this.form.value);
-    console.log(this.gadgetsMail);
+    // this.form.value.message =  JSON.stringify(this.offerForm.value);
+
+    this.offersMail = Object.assign({}, this.form.value);
+    console.log(Object.assign({}, this.offerForm.value));
+    console.log(this.offersMail);
     this.busy = true;
-    this.ms.sendMail(this.gadgetsMail).subscribe(
+    this.ms.sendMail(this.offersMail).subscribe(
       () => {
         this.ts.get('CONTACT.SendSuccess').subscribe((res: string) => {
           this.ngxAlert('success', res);
@@ -127,16 +135,54 @@ export class OffersComponent implements OnInit {
     // check select
     const cOption = '.{option}';
     this.templateBody =
-      this.templateBody.replace(cOption, this.offerForm.value.optionChoise.option);
+      this.templateBody.replace(cOption, this.offerForm.value.optionChoise);
+
+    // Person1
+    const cPerson1 = '.{person1}';
+    this.templateBody =
+      this.templateBody.replace(cPerson1, this.offerForm.value.person1);
+    // Birthday1
+    const cBirthDay1 = '.{birthDay1}';
+    this.templateBody =
+      this.templateBody.replace(cBirthDay1, this.offerForm.value.birthDay1);
+    // Person1
+    const cPerson2 = '.{person2}';
+    this.templateBody =
+      this.templateBody.replace(cPerson2, this.offerForm.value.person2);
+    // Birthday1
+    const cBirthDay2 = '.{birthDay2}';
+    this.templateBody =
+      this.templateBody.replace(cBirthDay2, this.offerForm.value.birthDay2);
+    // Person1
+    const cPerson3 = '.{person3}';
+    this.templateBody =
+      this.templateBody.replace(cPerson3, this.offerForm.value.person3);
+    // Birthday1
+    const cBirthDay3 = '.{birthDay3}';
+    this.templateBody =
+      this.templateBody.replace(cBirthDay3, this.offerForm.value.birthDay3);
+
+
+    // Amount
+    const cAmount = '.{qrAmountValue}';
+    this.templateBody =
+      this.templateBody.replace(cAmount, this.qrAmountValue);
+    // Reference
+    const cReference = '.{qrReferenceValue}';
+    this.templateBody =
+      this.templateBody.replace(cReference, this.qrReferenceValue);
 
     this.form.value.message = JSON.stringify(this.offerForm.value);
     this.form.value.template = this.templateBody;
   }
 
-  onChange() {
-    const chosen: string = this.offerForm.value.optionChoise.option.substring(0, 1);
+  onChange(e) {
+    console.log(e.target.value);
+
+    const assured: string = e.target.value.substring(0, 1);
+    console.log(assured);
     this.choiseMade = true;
-    switch (chosen) {
+    switch (assured) {
       case '1':
         this.qrAmountValue = 'EUR36.75';
         this.hidePerson2 = true;
@@ -159,46 +205,46 @@ export class OffersComponent implements OnInit {
         break;
     }
     this.qrRefresh();
-    this.createOffersForm();
+    this.createOffersForm(assured);
   }
 
-  createOffersForm() {
-    this.offerForm = null;
-    switch (this.numberInsured) {
-      case 0:
-      case 1:
+  createOffersForm(chosen: string) {
+    // this.offerForm = null;
+    switch (chosen) {
+      case '0':
+      case '1':
         this.offerForm = this.fb.group({
-          optionChoise: [null],
+          optionChoise: [chosen],
           person1: [this.urlName, Validators.required],
-          birthday1: [null, Validators.required],
+          birthDay1: [null, Validators.required],
           person2: [null],
-          birthday2: [null],
+          birthDay2: [null],
           person3: [null],
-          birthday3: [null]
+          birthDay3: [null]
         });
         break;
 
-      case 2:
+      case '2':
         this.offerForm = this.fb.group({
-          optionChoise: [null],
+          optionChoise: [chosen],
           person1: [this.urlName, Validators.required],
-          birthday1: [null, Validators.required],
+          birthDay1: [null, Validators.required],
           person2: [null, Validators.required],
-          birthday2: [null, Validators.required],
+          birthDay2: [null, Validators.required],
           person3: [null],
-          birthday3: [null]
+          birthDay3: [null]
         });
         break;
 
-      case 3:
+      case '3':
         this.offerForm = this.fb.group({
-          optionChoise: [null],
+          optionChoise: [chosen],
           person1: [this.urlName, Validators.required],
-          birthday1: [null, Validators.required],
+          birthDay1: [null, Validators.required],
           person2: [null, Validators.required],
-          birthday2: [null, Validators.required],
+          birthDay2: [null, Validators.required],
           person3: [null, Validators.required],
-          birthday3: [null, Validators.required]
+          birthDay3: [null, Validators.required]
         });
         break;
     }
@@ -237,13 +283,13 @@ export class OffersComponent implements OnInit {
       .subscribe((data) => {
         // console.log(data);
         this.templateBody = data;
-        this.createOffersForm();
         this.mainForm();
-        this.qrRefresh();
+        // this.qrRefresh();
       });
   }
 
   mainForm() {
+    this.createOffersForm('0');
     this.form = this.fb.group({
       subject: [this.mailSubject + ' {' + this.urlId + '}', Validators.required],
       name: [this.urlName, Validators.required],
@@ -264,7 +310,7 @@ export class OffersComponent implements OnInit {
       ],
       phone: [null],
       copySender: [true],
-      message: [JSON.stringify(this.offerForm.value)],
+      message: [null],
       template: [this.templateBody],
       data: [null],
       apiGuid: [environment.apiVsoftMailGuid, Validators.required],
@@ -283,5 +329,14 @@ export class OffersComponent implements OnInit {
 
   onClosed(dismissedAlert: AlertComponent): void {
     this.alerts = this.alerts.filter((alert) => alert !== dismissedAlert);
+  }
+
+  enableTabs() {
+    this.staticTabs.tabs[1].disabled = false;
+    this.staticTabs.tabs[2].disabled = false;
+  }
+  disableTabs() {
+    this.staticTabs.tabs[1].disabled = true;
+    this.staticTabs.tabs[2].disabled = true;
   }
 }
