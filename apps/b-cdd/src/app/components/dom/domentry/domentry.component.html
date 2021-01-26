@@ -3,14 +3,41 @@
     <tabset #staticTabs>
       <tab heading="{{ 'CDDENTRY.TabList' | translate }}">
         <vsoft-nx-domentries></vsoft-nx-domentries>
-      </tab>
-
+      </tab
+      >
+      <!-- <input type="button">
+      <input type="checkbox">
+      <input type="color">
+      <input type="date">
+      <input type="datetime-local">
+      <input type="email">
+      <input type="file">
+      <input type="hidden">
+      <input type="image">
+      <input type="month">
+      <input type="number">
+      <input type="password">
+      <input type="radio">
+      <input type="range">
+      <input type="reset">
+      <input type="search">
+      <input type="submit">
+      <input type="tel">
+      <input type="text">
+      <input type="time">
+      <input type="url">
+      <input type="week"> -->
       <tab heading="{{ tabAddOrEdit }}">
         <form [formGroup]="domEntryForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <input formControlName="id" hidden>
-            <input type="number" class="form-control mt-1" formControlName="amount"
-              placeholder="{{ 'CDDENTRY.AmountLabel' | translate }}">
+
+            <vsoft-nx-text-input
+              formControlName="amount"
+              type="number"
+              label="{{ 'CDDENTRY.AmountLabel' | translate }}"
+              warningMessage="{{ 'CDDENTRY.AmountMinMaxMessage' | translate }}"
+            ></vsoft-nx-text-input>
 
             <vsoft-nx-text-input
               formControlName="communication"

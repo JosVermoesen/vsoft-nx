@@ -42,7 +42,7 @@
     "TabMaintenanceLabel": "Maintenance",
     "EndToEndRequiredMessage": "EndToEnd Message is required",
     "AmountRequiredMessage": "Amount is required",
-    "AmountMinMaxMessage": "Min 0.01 and max 5000",
+    "AmountMinMaxMessage": "min 0.01 and max 5000",
     "MandateIdRequiredMessage": "Mandate Id is required",
     "MandateStartDateRequiredMessage": "Mandate Startdate is required",
     "ClientNameRequiredMessage": "Client name is required",

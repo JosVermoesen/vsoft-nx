@@ -87,7 +87,7 @@
     "@nrwl/jest": "11.0.20",
     "@nrwl/storybook": "^11.0.20",
     "@nrwl/tao": "11.0.20",
-    "@nrwl/workspace": "^11.1.5",
+    "@nrwl/workspace": "11.1.5",
     "@storybook/addon-knobs": "^6.1.11",
     "@storybook/angular": "^6.1.11",
     "@types/jest": "26.0.8",
