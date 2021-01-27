@@ -1,23 +1,23 @@
 # vsoft-nx
 
-## Steps for vsoft-nx template
+## Steps for demo-nx template
 
 ### the first app
 
-- `npx create-nx-workspace vsoft-nx --preset=angular`
-- application name: vsoft-nx, scss, ESLint
+- `npx create-nx-workspace demo-nx --preset=angular`
+- application name: demo-nx, scss, ESLint
 - launch the test: `npx ng e2e vsoft-nx-e2e --watch` or use Nx Console (prefered)
 
 ### vsoft-interfaces the first lib
 
-- `npx ng generate lib vsoft-interfaces` or use Nx Console (prefered)
+- `npx ng generate lib demo-interfaces` or use Nx Console (prefered)
 - generate the component: `npx ng generate component privacy --project=privacy`
 
 ### use the tools
 
 - `nx dep-graph` to have visual of your apps, libs and connections
 - `npm install -D @nrwl/storybook` to add the storybook schematics (and use Nx Console to execute task storybook)
-- Step1: Use Nx Console (above) to generate storybook functionality for libs, example: vsoft-interfaces
+- Step1: Use Nx Console (above) to generate storybook functionality for libs, example: demo-interfaces
 - Step2: Use Nx Console (projects:below) to execute task storybook
 
 https://youtu.be/tTR9OVMC0VE
