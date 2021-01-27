@@ -1,4 +1,4 @@
-# vsoft-nx
+# demo-nx
 
 ## Steps for demo-nx template
 
